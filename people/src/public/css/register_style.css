@@ -1,0 +1,73 @@
+
+
+.separador-formu{
+  height: 10px;
+}
+
+
+
+body{
+  background: url(logo.png);   
+  background-size:cover;
+  background: position 20px;;
+  font-family: sans-serif;
+}
+
+
+.formulario2{
+  margin: auto;;  
+  border-radius: 60px;
+  padding: 9px;
+  line-height: 10px;
+  margin-top: 200px;
+  width: 40%;
+  background: url(moradp.webp); 
+  
+}
+
+.reg{
+  text-align: center;
+}
+
+#ree{
+  font-size: 40px;
+
+}
+.slider{
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+
+}
+.slider ul{
+  display: flex;
+  padding: 0%;
+  width: 200%;
+  animation: automatico 10s infinite alternate linear;
+
+}
+.slider li{
+  width: 90%;
+  list-style: none;
+
+}
+.slider img{
+  width: 90%;
+  height: 150px;
+}
+@media(min-width: 780px){
+  .slider img{
+    height: 700px;
+  }
+}
+
+@keyframes  automatico{
+  0%{margin-left: 0;}
+  20%{margin-left: 0;}
+  25%{margin-left: -100%;}
+  45%{margin-left: -100%;}
+  50%{margin-left: -100%;}
+  70%{margin-left: -200%;}
+  75%{margin-left: -300%;}
+  100%{margin-left: -300%;}
+}
