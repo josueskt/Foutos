@@ -1,4 +1,8 @@
-
+h2{
+    border-style: none;
+    vertical-align: center;
+    text-align: center;
+}
 button{
     background-color: rgba(0, 0, 0, 0);
     color: white;
@@ -6,8 +10,9 @@ button{
     padding-left: 40px;
     font-size: 14px;
     text-align: left;
+    vertical-align: center;
 }
-button:hover {
+.central div button:hover {
     background-color: rgb(73, 73, 73);
 }
 
@@ -24,6 +29,11 @@ button:hover {
     grid-template-columns: 1fr auto;
     color: white;
     text-align: center;
+    vertical-align: center;
 
 }
+.login h2 { 
+   padding-top: 7px;
+}
+
 
