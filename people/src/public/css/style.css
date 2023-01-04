@@ -7,37 +7,12 @@
 body{
 	background-color: grey;
 }
-nav{
-	max-width: 10000px;
-	margin: auto;
-	background-color: black;
-	font-size: 20px;
-	margin-top: 0px;
-}
-.menu-horizontal{
-	list-style: none;
-	display: flex;
-	justify-content: space-around;
-}
-.menu-horizontal > li > a{
-	display: block;
-	padding: 15px 20px;
-	color: white;
-	text-decoration: none;
-}
-.menu-horizontal > li:hover{
-	background-color: green;
-}
-.menu-vertical{
-	position: absolute;
-	display: none;
-	list-style: none;
-	width: 170px;
-	background-color: rgba(0, 0, 0, .5);
-}
-.menu-horizontal li:hover .menu-vertical{
-	display: block;
-	width: 140px;
+.image{
+	width: 100px;
+	height: 150px;
+	padding: 70px;
+	
+
 }
 .menu-vertical li:hover{
 	background-color: black;
@@ -50,19 +25,32 @@ nav{
 	padding: 15px 15px 15px 20px;
 
 }
+.contenido{
+
+	display: flex;
+	margin: 50px;
+}
 .articulos{
-	width: 50%;
-	border-right: 3px solid black;
+	width: 70%;
+	border-right: 4px solid black;
 
 }
 .menu-secundario{
-	width: 220%;
-	margin-top: 100px; 
+	width: 130%;
+	margin-top: 30px; 
 } 
 
 .menu-secundario a {
 	display: block;
-	text-align: center;
+	text-align: right;
 	color: white; 
-	margin-bottom: 20px;	 	
+	margin-bottom: 80px;	 	
+}
+input{
+    width: 20%;
+    height: 40px;
+	margin-bottom: 100px;
+	float: right;
+	margin: -50px;
+	
 }
