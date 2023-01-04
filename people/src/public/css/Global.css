@@ -3,8 +3,10 @@ body, div, ul, ol, dl, dt, dd, li, dl, h1, h2, h3, h4
  
 ol, ul ,li{list-style: none;} 
 img {border: 0; vertical-align:middle;} 
-body{color:#000000;background:#FFF; text-align:center;} 
+body{color:#000000;background:rgb(53, 53, 53); text-align:center;} 
 .clear{clear:both;height:1px;width:100%; overflow:hidden; margin-top:-1px;} 
 a{color:#000000;text-decoration:none; }  
 a:hover{color:#BA2636;text-decoration:underline;} 
 /*usar los estilos globales  en todo como base de su html*/
+
+
