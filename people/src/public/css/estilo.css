@@ -75,6 +75,26 @@ button:hover {
 }
 }
 @media screen and (min-width: 1024px) {
+  .navbar-nav, .mr-auto ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #000000bb;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(243, 235, 235);
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color on hover */
+  li a:hover {
+    background-color: rgb(228, 19, 19);
+    color: rgb(255, 255, 255);
+  }
   .circular--square {
       border-radius: 50%;
       position: relative;
@@ -92,9 +112,7 @@ button:hover {
     flex-direction: column;
     display: inline;
   }
-  .carrusel-menu {
-      display: none;
-    }
+  
     .carrusel {
       display: flex;
       gap: 10px;
