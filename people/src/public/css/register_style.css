@@ -7,10 +7,11 @@
 
 
 body{
-  background: url(logo.png);   
+  background:cornsilk;   
   background-size:cover;
-  background: position 20px;;
+  background: position 50px;;
   font-family: sans-serif;
+  color: white;
 }
 
 
@@ -18,56 +19,34 @@ body{
   margin: auto;;  
   border-radius: 60px;
   padding: 9px;
-  line-height: 10px;
-  margin-top: 200px;
-  width: 40%;
-  background: url(moradp.webp); 
+  line-height: 22px;
+  width: 30%;
+   background-image: linear-gradient(125deg, #0097ff 0, #008fff 7.14%, #0086ff 14.29%, #367bff 21.43%, #816eff 28.57%, #ab60ff 35.71%, #cb4eff 42.86%, #e438ff 50%, #f913ec 57.14%, #ff00d7 64.29%, #ff00c2 71.43%, #ff00ac 78.57%, #ff0096 85.71%, #ff0080 92.86%, #ff006b 100%);; 
   
 }
 
 .reg{
   text-align: center;
+  color: white;
+
+
 }
 
 #ree{
-  font-size: 40px;
-
-}
-.slider{
-  width: 100%;
+  font-size: 30px;
+  background: rgba(79, 27, 79, 0.504);
+  border-radius: 0%;
+  line-height: 80%;
+  width: 30%;
+  padding: 2%;
   margin: auto;
-  overflow: hidden;
-
-}
-.slider ul{
-  display: flex;
-  padding: 0%;
-  width: 200%;
-  animation: automatico 10s infinite alternate linear;
-
-}
-.slider li{
-  width: 90%;
-  list-style: none;
-
-}
-.slider img{
-  width: 90%;
-  height: 150px;
-}
-@media(min-width: 780px){
-  .slider img{
-    height: 700px;
-  }
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
 }
 
-@keyframes  automatico{
-  0%{margin-left: 0;}
-  20%{margin-left: 0;}
-  25%{margin-left: -100%;}
-  45%{margin-left: -100%;}
-  50%{margin-left: -100%;}
-  70%{margin-left: -200%;}
-  75%{margin-left: -300%;}
-  100%{margin-left: -300%;}
+.carrusel_element img{
+  width: 750px;
+  height: 750px;
+
+
 }
