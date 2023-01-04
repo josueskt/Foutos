@@ -35,5 +35,27 @@ button{
 .login h2 { 
    padding-top: 7px;
 }
+.slider_one{
+    visibility: visible;
+    top: 40px;
+    left: 55%;
+    color: black;
+background-color: white;
+position: fixed;
+width: auto;
+z-index:1;
+}
+.slider_two{
+    visibility: visible;
+    
+    top: 40px;
+    right: 10px;
+    color: black;
+background-color: white;
+position: fixed;
+width: auto;
+z-index:1;
+}
+
 
 
