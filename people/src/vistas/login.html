@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../public/css/login_style.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN812</title>
+    <title>LOGIN</title>
 </head>
 
 <head>
@@ -46,36 +47,79 @@
     <div id="cuadrado">
         <form class="contenedor2">
             <div class="ft-login">
-                <img src="imagenlogin.png" alt="">
-                <h1> LOGIN</h1>
-            </div>
+                <h1> <center>MEMBER LOGIN </center></h1>
+                <link rel="stylesheet" href="../public/css/Global.css">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+                <img src="../public/img/imagenlogin.png" alt=""
+               
+ </div>
+
             <br>
+            
             <div id="separador"></div>
             <form name="form" action="INICIAR SESION">
                 <div class="" id="form2">
-                    <label for="">Usuario: <br>
-                        <input type="text" name="usuario" placeholder="Usuario..." id="Usuario">
+                    <label for="">User: <br>
+                        <input type="text" name="usuario" placeholder="User..." id="Usuario">
                     </label>
                     <br>
                 </div>
                 <br>
                 <div id="form2">
                     <label for="">Password: <br>
-                        <input type="Password" name="password" placeholder="Contraseña..." id="password">
+                        <input type="Password" name="password" placeholder="Password..." id="password">
                     </label>
                 </div>
                 <br>
                 <div class="" id="form2">
-                    <button type="button" onclick="agregarUsuario()">Iniciar Sesion </button>
+                    <button type="button" onclick="agregarUsuario()">login </button>
                 </div>
-                <div id="form2">
-                    <p> <a href="./register.html">Regristrate aqui </a></p>
+                <div id="form2b">
+                    <p> <a href="./register.html">Register </a></p>
                 </div>
-                <div class="slider">
-
-                
+                <div class="carrusel_cont">
+                    <button aria-label="anterior" class="carusser_anterior">
+                        <p><</p>
+                    </button>
+                    <button aria-label="siguiente" class="carusser_siguiente">
+                        <p>></p>
+                    </button>
+            
+                    <div class="caruserl_lista">
+                        <div class="carrusel_element">
+                            <img src="../public/img/imagen1.jpg" alt="">
+                        </div>
+                        <div class="carrusel_element">
+                            <img src="../public/img/imagen 3.png" alt="">
+                        </div>
+                        <div class="carrusel_element">
+                            <img src="../public/img/imagen4.jpeg" alt="">
+                        </div>
+                        <div class="carrusel_element">
+                            <img src="../public/img/imagen2.jpg" alt="">
+                        </div>
+                        <div class="carrusel_element">
+                            <img src="../public/img/imagen4.jpeg" alt="">
+                        </div>
+                        <div class="carrusel_element">
+                            <img src="../public/img/imagen 3.png" alt="">
+                        </div>
+            
+            
+                    </div>
             
                 </div>
+                <div role="tablist" class="carusel_ind"></div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+            <script src="../public/js/register.js"></script>
+            
+                    </div>
+            
+                </div>
+                <div role="tablist" class="carusel_ind"></div>
+            </div>
+            
             </form>
         </form>
 
