@@ -1,0 +1,33 @@
+.comunidad{
+    
+    max-width: 1000px;
+    min-width: 500px;
+    margin: auto;
+    
+}
+.comunidad_todos{
+    padding: 20px;
+}
+.comunidad_elementos{
+    margin: 10px;
+    background-color: rgb(47, 47, 47);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    border-radius: 5px ;
+    -webkit-border-radius: 5px ;
+    -moz-border-radius: 5px ;
+    -ms-border-radius: 5px ;
+    -o-border-radius: 5px ;
+    border-bottom:  solid rgb(255, 255, 255);
+}
+.comunidad_elementos_foto{
+    color: black;
+    border-right: 5px solid  rgb(255, 255, 255);
+    
+}
+.comunidad_elementos_foto img {
+    width: 100%;
+}
+.comunidad_elementos_texto{
+    
+}
