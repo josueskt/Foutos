@@ -7,26 +7,35 @@
 .carusser_siguiente{
     position: absolute;
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 80px;
+    height: 200px;
     border: none;
-    top: 30%  ;
+    border-radius:  7px;
     line-height: 30px;
     text-align: center;
     background-color: none;
     color: white;
-  
+    background-color: rgba(5, 5, 5, 0.247);
+    -webkit-border-radius:  7px;
+    -moz-border-radius:  7px;
+    -ms-border-radius:  7px;
+    -o-border-radius:  7px;
 }
 .carusser_anterior{
-    left: -90px;
+    left: -80px;
+    
 
 }
 .carusser_anterior img , .carusser_siguiente img{
     width: 60px;
+    text-align: left;
+    display: block;
+    
+    
     
 }
 .carusser_siguiente{
-    right:  -10px;
+    right:  -80px;
 }
 .ruleta{
     
@@ -64,4 +73,8 @@ footer{
     height: 200px;
     color: white ; 
    background-image: url(../img/foot.png);
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
 }
