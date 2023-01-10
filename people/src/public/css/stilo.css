@@ -5,9 +5,6 @@
 	box-sizing: border-box;
 	font-family: 'Open Sans';
 }
-body{
-	background-color: grey;
-}
 nav{
 	max-width: 10000px;
 	margin: auto;
@@ -169,9 +166,6 @@ input, textarea{
 		padding: 0;
 		box-sizing: border-box;
 		font-family: 'Open Sans';
-	}
-	body{
-		background-color: grey;
 	}
 	nav{
 		max-width: 10000px;

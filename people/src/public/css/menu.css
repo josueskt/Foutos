@@ -1,4 +1,8 @@
-
+h2{
+    border-style: none;
+    vertical-align: center;
+    text-align: center;
+}
 button{
     background-color: rgba(0, 0, 0, 0);
     color: white;
@@ -6,9 +10,16 @@ button{
     padding-left: 40px;
     font-size: 14px;
     text-align: left;
+    vertical-align: center;
 }
-button:hover {
+.central div button:hover {
     background-color: rgb(73, 73, 73);
+}
+.central{
+    border-right: 5px solid white;
+}
+.picture{
+    border-right: 5px solid white;
 }
 
 .Bar_menu{
@@ -19,11 +30,39 @@ button:hover {
     grid-template-columns: auto 1fr 300px;
 }
 .login {
+
     background-color: rgb(26, 26, 26);
     display: grid;
     grid-template-columns: 1fr auto;
     color: white;
     text-align: center;
+    vertical-align: center;
 
 }
+.login h2 { 
+   padding-top: 7px;
+}
+.slider_one{
+    visibility: visible;
+    top: 40px;
+    left: 55%;
+    color: black;
+background-color: white;
+position: fixed;
+width: auto;
+z-index:1;
+}
+.slider_two{
+    visibility: visible;
+    
+    top: 40px;
+    right: 10px;
+    color: black;
+background-color: white;
+position: fixed;
+width: auto;
+z-index:1;
+}
+
+
 
