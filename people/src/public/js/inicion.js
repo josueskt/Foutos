@@ -10,3 +10,19 @@ window.addEventListener('load' , function(){
         }
     })
 })
+
+const $openclose = document.getElementById("close-open"),
+$userclose = document.getElementById("closesecsion")
+$openclose.addEventListener("click",()=>{
+  $userclose.classList.toggle("close")
+})
+
+
+const $openclos = document.getElementById("pen-clo"),
+$userclos = document.getElementById("closesecsion_two")
+$openclos.addEventListener("click",()=>{
+  $userclos.classList.toggle("close_two")
+})
+
+
+
