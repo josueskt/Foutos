@@ -126,14 +126,13 @@
 }
 @media screen and (min-width: 1024px) {
   .navbar-nav, .mr-auto ul{
-    list-style-type: none;
     margin: 0;
     padding: 0;
     width: 350px;
-    height: 350px;
+    height: 205px;
     background-color: #000000bb;
-    border-style:ridge;
     border-color:#8889a1;
+    border-style: ridge;
   }
   
   li a {
@@ -232,6 +231,7 @@
     border-color: #8889a1;
     font-size: 30px;
     padding-top:0px;
+    border-radius: 40%;
   }
   .subir{
      
