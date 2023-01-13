@@ -100,25 +100,28 @@
     background-position: 20px;
     color: darkred;
     background-color:#000000bb;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
     border-style:double;
     border-color: #8889a1;
   }
-  button.subir{
-    cursor:pointer; 
-    display:inline-block;
+  .subir{
+     
     width:250px;
     height:40px;
     margin-top:10px;
-    border:none;
     font-family:Impact;
-    text-transform:uppercase;
-    color:rgb(252, 252, 252);
-    -webkit-transition:.5s;
-    transition:.5s;
-    background-color: rgb(11, 94, 119);
-    border-style:double;
-    border-color: #8889a1;
+    color: #000000bb;
+    border-color: darkcyan;
+  }
+  @keyframes  automatico{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    50%{margin-left: -100%;}
+    70%{margin-left: -200%;}
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
   }
 }
 @media screen and (min-width: 1024px) {
@@ -126,7 +129,8 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 200px;
+    width: 350px;
+    height: 350px;
     background-color: #000000bb;
     border-style:ridge;
     border-color:#8889a1;
@@ -141,7 +145,7 @@
   
   /* Change the link color on hover */
   li a:hover {
-    background-color: rgb(228, 19, 19);
+    background-color: rgb(129, 16, 16);
     color: rgb(255, 255, 255);
   }
   .circular--square {
@@ -218,29 +222,46 @@
   }
   h1.pedo{
     
-    width: 120px;
-    height: 35px;
+    width: 220px;
+    height: 40px;
     background-position: 20px;
     color: darkred;
     background-color:#000000bb;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
     border-style:double;
     border-color: #8889a1;
+    font-size: 30px;
+    padding-top: 5px;
   }
-  button.subir{
-    cursor:pointer; 
-    display:inline-block;
+  .subir{
+     
     width:250px;
     height:40px;
     margin-top:10px;
-    border:none;
     font-family:Impact;
-    text-transform:uppercase;
-    color:rgb(252, 252, 252);
-    -webkit-transition:.5s;
-    transition:.5s;
-    background-color: rgb(11, 94, 119);
-    border-style:double;
-    border-color: #8889a1;
+    color: #000000bb;
+    border-color: rgb(0, 0, 0) !important;
+    border-bottom: solid;
+    border-radius:50px;
+    --bs-btn-hover-bg: #041836;
+    background-color: #e6e6eb7e;
+
+  }
+  h1.profile{
+    height: 35px;
+    
+  }
+  @keyframes  automatico{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    50%{margin-left: -100%;}
+    70%{margin-left: -200%;}
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+  }
+  .nav-item{
+    height: 100px;
   }
 }

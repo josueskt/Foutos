@@ -20,75 +20,65 @@
     <br>
     <br>
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <h1 class="pedo">AJUSTES</h1>
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <h1 class="pedo">AJUSTES</h1>
 
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link" style="color:rgb(255, 255, 255);" href="#">Cuenta<span class="sr-only"></span></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" style="color:rgb(255, 255, 255);" href="#">Apariencia</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color:rgb(247, 247, 247);" href="#">Contraseña</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color:rgb(247, 247, 247);" href="#">Perfíl</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </nav>
-            </div>
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" style= "height: 45px;font-size: 30px;color:rgb(255, 255, 255);" href="#">Cuenta<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style= "height: 45px;font-size: 30px;color:rgb(255, 255, 255);" href="#">Apariencia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="height: 45px;font-size: 30px;color:rgb(247, 247, 247);" href="#">Contraseña</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="height: 45px;font-size: 30px;color:rgb(247, 247, 247);" href="./pagina2.html">Perfíl</a>
+                </li>
+                                <br>
 
-            <div class="col">        
-                <img class="circular--square" src="../public/img/images (1).png" />
-                <button class="subir">
-                  <span>SUBIR FOTO</span>
-                </button>
+              </ul>
             </div>
-            <div class="col" style= "border-style: groove;margin: 20px;background-color:#000000bb;">
-              
-                <h1 style="color: antiquewhite;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"> Profile</h1>
-
-                <form>
-                    <div class="form-group">
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email: ">
-                    </div>
-                    <br>
-                    <div class="form-group">
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password: ">
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label style="font-family:Impact;color: antiquewhite;" for="country">País:</label>
-                        <br>
-                        <select id="country" name="country">
-                            <option value="australia">Australia</option>
-                            <option value="canada">Canada</option>
-                            <option value="usa">USA</option>
-                            <option value="ecuador">Ecuador</option>
-                            <option value="venezuela">Venezuela</option>
-                          </select>                      
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label style="font-family:Impact;color: antiquewhite;" for="city">Ciudad:</label>
-                        <br>
-                        <select id="city" name="city">
-                            <option value="quito">Quito</option>
-                            <option value="caracas">Caracas</option>
-                            <option value="new york">New york</option>
-                          </select>                      
-                    </div>
-                    
-                </form>            
-            </div>
+          </nav>
         </div>
 
+        <div class="col">        
+          <img class="circular--square" src="../public/img/images (1).png" />
+          <button type="button" class="btn btn-outline-primary subir">Subir Foto</button>
+        </div>
+
+        <div class="col" style= "border-style: groove;margin: 20px;background-color:#000000bb;">
+
+          <form>
+            <br>
+              <div class="form-group">
+                <label style="font-family:Impact;color: antiquewhite;" for="country">Nombre:</label>
+                <input class="form-control" id="exampleInputPassword1" readonly value="prueba">
+              </div>
+              <br>
+              <div class="form-group">
+                <label style="font-family:Impact;color: antiquewhite;" for="country">Correo:</label>
+                <input class="form-control" id="exampleInputPassword1" readonly value="prueba">
+              </div>
+              <br>
+              <div class="form-group">
+                  <label style="font-family:Impact;color: antiquewhite;" for="country">País:</label>
+                  <br>
+                  <input class="form-control" id="exampleInputPassword1" readonly value="prueba">          
+              </div>
+              <br>
+              <div class="form-group">
+                  <label style="font-family:Impact;color: antiquewhite;" for="city">Ciudad:</label>
+                  <input class="form-control" id="exampleInputPassword1" readonly value="prueba">                     
+              </div>
+              <br>              
+          </form>
+        </div>
+      </div>
     </div>
 </body>
 </html>
