@@ -1,36 +1,43 @@
-  
+
   .formulario2{
     margin: auto;;  
     border-radius: 60px;
     padding: 9px;
-    line-height: 32px;
     width: 40%;
-     background-color: rgba(0, 0, 0, 0.596);
+     background-color: rgba(0, 0, 0, 0.464);
+     line-height: 30px;
+     width: 420px;
+     
   }
   .titulo{
-    color: red;
-    text-shadow: 1px 1px rgb(9, 1, 1);
-  
+    color: rgb(200, 25, 25);
+    text-shadow: 1px 1px rgb(133, 13, 13);
     width: 100%;
    padding: 0.5%;
    margin-left: auto;
   }
   
-  #ree{
-    font-size: 30px;
-    line-height: 70%;
-    width: 50%;
-    padding: 1%;
-    margin: 20px;
-    line-height: 50%;
-   
+  .separador-formu{
+    height: 20px;
   }
-
+  
   .reg{
-    width: 0px;
-    height: 40px;   
-   padding: 60px;
+    color: rgb(233, 231, 231);
+  }
+  .reg > label > input {
+    width: 70%;
+    border-radius: 50px;
+    height: 20px;
+  } 
+  
+  #ree{
     
+    background: rgba(222, 208, 222, 0.188);
     
   }
   
+  .logo{
+    background-color: #252525;
+    width: 100%;
+    
+  }

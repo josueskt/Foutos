@@ -1,24 +1,16 @@
 
-  
-  body{
-    background-repeat: no-repeat;
-    background: cornsilk;   
-    background-size:cover;
-  }
-  
   #cuadrado{
-    width: 350px;
-    height: 450px;
     background: url(../img/moradp.webp); 
-    margin: 100px;;
     border-radius: 30px; 
-         
+    margin: auto;
+    width: 400px;
   }
   
   .contenedor2{
     margin-top:60px;
     text-align: center;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
+    
     
   }
   
@@ -29,32 +21,40 @@
   
   #separador{
     height: 50px;
+    
+    
   }
   
   #form2b{
    
-      width: 70px;
+      width: 90px;
       height: 30px;   
-      margin-top: 10px;
       margin: auto;
       border-radius: 6px;
       background-color: rgba(45, 23, 65, 0.447);
       
   }
   #form2 button{
-    width: 130px;
-    height: 35px;
-    border-style: none;
+    width: 135px;
+    height: 40px;
     border-radius: 20px;
-    background: linear-gradient(146deg, rgb(95, 65, 133) 43%, rgba(255,213,250,1) 83%);
+    background: linear-gradient(146deg, rgb(150, 105, 208) 43%, rgba(255,213,250,1) 83%);
   }
-  .carrusel_element img{
-    width: 590px;
-    height: 590px;
-    margin: 900px;
-    padding: 500px;
-    padding-top: 50px;
-  
+  .logo{
+    background-color: #252525;
+    width: 100%;
+    
+  }
+  .container_fotos img{
+    background-color:rgba(80, 15, 80, 0.433);
+    width: 420px;
+    height: 450px;
+    border-radius: 6px;
+  }
+  .container{
+    margin: auto;
+    display: grid ;
+    grid-template-columns:200px 500px 1fr;
   }
  
   
