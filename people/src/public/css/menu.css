@@ -57,9 +57,10 @@ background-color: white;
 position: fixed;
 width: auto;
 z-index:1;
+visibility: hidden;
 }
 .slider_two{
-    visibility: visible;
+    visibility: hidden;
     
     top: 45px;
     right: 10px;
@@ -70,10 +71,10 @@ width: auto;
 z-index:1;
 }
 .close {
-    visibility: hidden;
+    visibility: visible;
 }
 .close_two {
-    visibility: hidden;
+    visibility: visible;
 }
 
 
