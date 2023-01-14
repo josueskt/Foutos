@@ -6,7 +6,6 @@ h2{
 button{
     background-color: rgba(0, 0, 0, 0);
     color: white;
-    padding: 12px;
     padding-left: 40px;
     font-size: 14px;
     text-align: left;
@@ -50,18 +49,32 @@ button{
     }
 .slider_one{
     visibility: visible;
-    top: 45px;
+    border-radius: 5px ;
+    top: 55px;
     left: 55%;
     color: black;
-background-color: white;
-position: fixed;
-width: auto;
-z-index:1;
+    background-color: white;
+    position: fixed;
+    width: auto;
+    z-index:1;
+    visibility: hidden;
+    -webkit-border-radius: 5px ;
+    -moz-border-radius: 5px ;
+    -ms-border-radius: 5px ;
+    -o-border-radius: 5px ;
+}
+.slider_one > div  , .slider_two > div {
+    padding-top: 5px;
+    width: 100px;
+}
+.slider_one > div > a  , .slider_two > div > a{
+    text-align: center;
 }
 .slider_two{
-    visibility: visible;
+    border-radius: 5px ;
+    visibility: hidden;
     
-    top: 45px;
+    top: 55px;
     right: 10px;
     color: black;
 background-color: white;
@@ -70,10 +83,14 @@ width: auto;
 z-index:1;
 }
 .close {
-    visibility: hidden;
+    visibility: visible;
 }
 .close_two {
-    visibility: hidden;
+    visibility: visible;
+}
+.central_buton {
+    text-align: center;
+    height: 45px;
 }
 
 
