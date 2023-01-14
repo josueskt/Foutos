@@ -3,44 +3,120 @@
 	<head >
 		<title>Vista para subir fotos </title>
 		<link rel="stylesheet" href="../public/css/stilo.css" type="text/css">
+		<link rel="stylesheet" href="../public/css/Global.css">
+		<link rel="stylesheet" href="../public/css/menu.css">
+	
+
+		
 
 	</head>
    		<body>
-			<nav>
-				<ul class="menu-horizontal">
-					<li><a href="#">FOUTUS</a></li>
-					<li><a href="#">ART</a></li>
-					<li><a href="#">Community</a></li>
-					<li><a href="#">Trending</a></li>
-					<li>
-						<a href="#">Categoria</a>
-						<ul class="menu-vertical">
+			<header>
 
-							<li><a href="#">Belleza</a></li>
-							<li><a href="#">Deporte</a></li>
-							<li><a href="#">Artistas</a></li>
-							<li><a href="#">Publicidad</a></li>
-							<li><a href="#">Moda</a></li>
 
-						</ul>
-					</li>
-		
-				</ul>
-			</nav>
+				<div class="Bar_menu">
+					<div class="picture">
+						<a href="../vistas/inicio.html"> <img src="../public/img/foutos.png" alt="foto" height="45px"></a>
+					</div>
+					<div class="central">
+						<div>
+							<a href="../vistas/comunidad.html"><button>Comunidad</button></a>
+							<button> Trending</button>
+							
+							<button type="" id="pen-clo"> category></button>
+							
+						</div>
+					</div>
+					
+						<div class="login" >
+						  
+							<div>
+							   <h2>Rasdasdasd</h2>
+							   
+							</div>
+							<div class="userimg"><img src="https://storage.googleapis.com/uscimages/account.png" alt="" height="35px" id="close-open"></div>
+			
+			
+			
+						</div>
+					
+					<div class="slider_one" id="closesecsion_two">
+						<div>
+							<a href="">2D</a>
+			
+						</div>
+						<div>
+							<a href="">olio</a>
+			
+						</div>
+						<div>
+							<a href="">3D</a>
+			
+						</div>
+						<div>
+							<a href="">retrato</a>
+			
+						</div>
+						<div>
+							<a href="">animales</a>
+			
+						</div>
+						<div>
+							<a href="">Mitologia</a>
+			
+						</div>
+					</div>
+					<div class="slider_two" id="closesecsion">
+						<div>
+							<a href="../vistas/profile.html">usuario</a>
+			
+						</div>
+						<div>
+							<a href="../vistas/configuracion_usuario.html">configuracion</a>
+			
+						</div>
+						<div>
+							<a href="../vistas/subir_imagen.html">upload</a>
+			
+						</div>
+						<div>
+							<a href="">mis fotos</a>
+			
+						</div>
+						<div>
+							<a href="">cuentas</a>
+			
+						</div>
+						<div>
+							<a href="">cerrar secion </a>
+			
+						</div>
+					</div>
+			
+				</div>
+				<script src="../public/js/inicion.js"></script>
+			</header>
 		<form>
-
 			<form action="">
 				<h1>TITULO</h1>
+				<br/>
 				<input type="text" class="field">  
 				
+				<br/><br/>
 				<br/>
 
 				<h1>DESCRIPCION</h1>
-				<textarea class="field"></textarea> 
-				
+
 				<br/>
 
+				<textarea class="field"></textarea> 
+				
+				<br/><br/>
+
 				<h1>FOTOS</h1>
+
+				<br/><br/>
+
 				<div class="form-file">
 					<div class="form-file__action">
 						<label for="image" class="title"></label>
@@ -59,18 +135,27 @@
 				<br/><br/>
 				<br/><br/>
 				<br/><br/>
+				<br/><br/>
+				<br/><br/>
 				<br/>
-				
+
 				<h1>CATEGORIA</h1>
+
+				<br/>
+				<br/>
+
 				<input type="text" class="field"> 
 
 				<br/>
 				<br/>
-				
-				<div class="form-group">
-					<button type="submit" class="form-button">Publicar</button>
-				</div>
-				
+				<br/>
+
+				<div class="col">
+					  <a href="../vistas/profile.html">
+					<button type="button" class="btn btn-outline-primary subir">PUBLICAR</button>
+					  </a>
+				  </div>
 			</form>
+			<script src="../public/js/subir.js"></script>
 		</body>
 		</html>
