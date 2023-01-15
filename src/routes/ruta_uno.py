@@ -1,4 +1,5 @@
-from flask import Blueprint ,jsonify
+from flask import Blueprint , jsonify 
+
 main=Blueprint('inicio',__name__)
 
 @main.route('/')
