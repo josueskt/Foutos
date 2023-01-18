@@ -80,12 +80,12 @@
 		overflow: hidden;
 		position: absolute;
 		width:  65%;
-		height: 230px;
+		height: 450px;
 		left: 250px;
 		background-color: goldenrod;
-		border-radius: 25px;
+		border-radius: 35%;
 		border: 10px dashed black;
-		transition: bacgroundColor 0.8s linear;
+		transition: backgroundColor 0.8s linear;
 		z-index: 30;
 		
 	}
@@ -111,21 +111,21 @@
 		height: 100%;
 		object-fit: cover;
 		z-index: 500;
+		border-radius: 35%;
 	}
 	.form-file__result--active {
 		background-color: rgba(82, 81, 79, 0.314);
 	}
 	.subir {
-		width:150px;
-		height:40px;
-		margin-top:10px;
+		width:145px;
+		height:50px;
+		margin-top:440px;
 		font-family:Impact;
 		color: #000000bb;
 		border-bottom: solid;
-		border-radius:50px;
+		border-radius: 40%;
 		background-color: #e6e6eb7e;
 		cursor: pointer;
-		
 	}
 	
 }
