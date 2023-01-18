@@ -21,89 +21,10 @@
 
 </head>
 <header>
-
-
-    <div class="Bar_menu">
-        <div class="picture">
-            <a href="../vistas/inicio.html"> <img src="../public/img/foutos.png" alt="foto" height="45px"></a>
-        </div>
-        <div class="central">
-            <div>
-                <a href="../vistas/comunidad.html"><button>Comunidad</button></a>
-                <button> Trending</button>
-                
-                <button type="" id="pen-clo"> category></button>
-                
-            </div>
-        </div>
-        
-            <div class="login" >
-              
-                <div>
-                   <h2>Rasdasdasd</h2>
-                   
-                </div>
-                <div class="userimg"><img src="https://storage.googleapis.com/uscimages/account.png" alt="" height="35px" id="close-open"></div>
-
-
-
-            </div>
-        
-        <div class="slider_one" id="closesecsion_two">
-            <div>
-                <a href="">2D</a>
-
-            </div>
-            <div>
-                <a href="">olio</a>
-
-            </div>
-            <div>
-                <a href="">3D</a>
-
-            </div>
-            <div>
-                <a href="">retrato</a>
-
-            </div>
-            <div>
-                <a href="">animales</a>
-
-            </div>
-            <div>
-                <a href="">Mitologia</a>
-
-            </div>
-        </div>
-        <div class="slider_two" id="closesecsion">
-            <div>
-                <a href="../vistas/profile.html">usuario</a>
-
-            </div>
-            <div>
-                <a href="../vistas/configuracion_usuario.html">configuracion</a>
-
-            </div>
-            <div>
-                <a href="../vistas/subir_imagen.html">upload</a>
-
-            </div>
-            <div>
-                <a href="">mis fotos</a>
-
-            </div>
-            <div>
-                <a href="">cuentas</a>
-
-            </div>
-            <div>
-                <a href="">cerrar secion </a>
-
-            </div>
-        </div>
-
-    </div>
-    <script src="../public/js/inicion.js"></script>
+    {% extends './menu.html' %}
+    {% block menu_bar  %}
+    
+    {{super()}}
 </header>
 <body>
     <br>
@@ -158,5 +79,6 @@
         </div>
 
     </div>
+    {% endblock  %}
 </body>
 </html>
