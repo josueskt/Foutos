@@ -10,6 +10,8 @@ from routes import register
 from routes import subir_foto
 from routes import login
 from routes import configuracion
+from routes import profile
+
 
 
 app = Flask(__name__)
@@ -25,6 +27,8 @@ app.register_blueprint(inicio.main ,url_prefix='/main')
 app.register_blueprint(register.main ,url_prefix='/register/user')
 app.register_blueprint(login.main ,url_prefix='/login/user')
 app.register_blueprint(configuracion.main ,url_prefix='/user/config')
+app.register_blueprint(profile.main , url_prefix = '/profile')
+
 app.register_blueprint(subir_foto.main ,url_prefix='/upload/foto')
     
 if __name__ == '__main__':

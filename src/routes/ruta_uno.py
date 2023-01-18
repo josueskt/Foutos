@@ -1,7 +1,7 @@
-from flask import Blueprint , jsonify 
+from flask import Blueprint , render_template 
 
-main=Blueprint('inicio',__name__)
+main=Blueprint('comunidad',__name__)
 
 @main.route('/')
-def get_user():
-    return jsonify({'mesagge':'asdsdasdasd'})
+def inicio():
+    return render_template('comunidad.html')

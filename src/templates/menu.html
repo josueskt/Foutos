@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -7,15 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="../public/css/Global.css">
-    <link rel="stylesheet" href="../public/css/menu.css">
+    
+    
 </head>
+
+
+
+
 <header>
-
-
+    {% block menu_bar  %}
+    <link rel="stylesheet" href="{{url_for('static',filename ='Global.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename ='menu.css')}}">
     <div class="Bar_menu">
         <div class="picture">
-            <a href="../vistas/inicio.html"> <img src="/people/src/public/img/foutos.png" alt="foto" height="45px"></a>
+            <a href="../vistas/inicio.html"> <img src="{{url_for('static',filename ='img/foutos.png')}}" alt="foto" height="45px"></a>
         </div>
         <div class="central">
             <div>
@@ -93,7 +98,8 @@
         </div>
 
     </div>
-    <script src="../public/js/inicion.js"></script>
+    <script src="{{url_for('static',filename ='script/inicion.js')}}"></script>
+    {% endblock  %}
 </header>
 
 <body>
