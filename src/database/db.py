@@ -1,7 +1,7 @@
 import psycopg2
 from  psycopg2 import DatabaseError
 from decouple import config
-def Conection(): 
+def get_Conection(): 
     try:
         return psycopg2.connect(
             

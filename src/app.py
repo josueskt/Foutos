@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask , Blueprint ,render_template
 from confg import config
 
 
@@ -16,7 +16,7 @@ from routes import profile
 
 app = Flask(__name__)
 def no_encontrado(error):
-    return "<h1>not foud</h1>",404
+    return render_template('errore.html'),404
 
 app.config.from_object(config['development'])
 
