@@ -13,9 +13,17 @@
     <title>Profile</title>
     <link rel="stylesheet" href="../public/css/estilo.css" type="text/css">
     <link rel="stylesheet" href="../public/css/Global.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
 
 </head>
+<header>
+  {% extends './menu.html' %}
+  {% block menu_bar  %}
+  
+  {{super()}}
+</head>
 <body>
+
     <br>
     <br>
     <br>
@@ -40,8 +48,19 @@
           </nav>
         </div>
 
-        <div class="col">        
-          <img class="circular--square" src="../public/img/images (1).png" />
+        <div class="col">    
+
+          <div class="form-file">
+            <div class="form-file__action">
+              <label for="image" class="title"></label>
+  
+              <input type="file" name="image" id="image" />
+            </div>
+            <div class="form-file__result" id="result-image">
+              <img id="img-result" alt="" />
+            </div>
+          </div>
+        
             <a href="./subir_imagen.html">
           <button type="button" class="btn btn-outline-primary subir">Subir Foto</button>
             </a>
@@ -76,5 +95,10 @@
         </div>
       </div>
     </div>
+    <script src="../public/js/configuracion_usuario.js"></script>
+    
+    
+    {% endblock  %}
 </body>
+
 </html>
