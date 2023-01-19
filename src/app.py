@@ -1,7 +1,7 @@
 from flask import Flask , Blueprint ,render_template
 from confg import config
 from database.db import get_Conection
-from psycopg2 import connect
+
 
 #rutas 
 from routes import ruta_uno
@@ -11,6 +11,7 @@ from routes import subir_foto
 from routes import login
 from routes import configuracion
 from routes import profile
+from routes import comunidad
 
 
 
@@ -31,8 +32,9 @@ app.register_blueprint(register.main ,url_prefix='/register/user')
 app.register_blueprint(login.main ,url_prefix='/login/user')
 app.register_blueprint(configuracion.main ,url_prefix='/user/config')
 app.register_blueprint(profile.main , url_prefix = '/profile')
-
+app.register_blueprint(comunidad.main ,url_prefix = '/comunidad')
 app.register_blueprint(subir_foto.main ,url_prefix='/upload/foto')
+
 @app.route('/a')
 def home():
      con = get_Conection()
