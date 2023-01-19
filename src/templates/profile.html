@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <title>Profile</title>
     <link rel="stylesheet" href="../public/css/estilo.css" type="text/css">
+    <link rel="stylesheet" href="../public/css/almacenar_imagenes.css">
     <link rel="stylesheet" href="../public/css/Global.css">
     <link rel="stylesheet" href="../public/css/menu.css">
     <link rel="stylesheet" href="{{url_for('static',filename ='menu.css')}}">
@@ -19,12 +20,10 @@
     <link rel="stylesheet" href="{{url_for('static',filename ='estilo.css')}}">
 
 
+
 </head>
 <header>
-    {% extends './menu.html' %}
-    {% block menu_bar  %}
-    
-    {{super()}}
+   
 </header>
 <body>
     <br>
@@ -37,48 +36,57 @@
             <div class="col">        
                 <img class="circular--square" src="../public/img/images (1).png" />
                 
-                <h1 style="color: antiquewhite;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"> Descripción</h1>
-                <h2 style= "color:antiquewhite;font-family:Arial, Helvetica, sans-serif" >Que tal? aqui puedes hablar acerca de ti.</h2>
+                <h1 style="margin-left:100px;color: antiquewhite;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"> Descripción</h1>
+                <h2 style= "margin-left:100px;color:antiquewhite;font-family:Arial, Helvetica, sans-serif" >Que tal? aqui puedes hablar acerca de ti.</h2>
             </div>
-            <div class="col" style= "border-color: lightseagreen;border-style: groove;margin: 20px;background-color: rgba(9, 131, 179, 0.459);">
+            <div class="col" style="margin-left:-40px" >
               
                 <h1 style="height: 40px;padding-top: 0px;font-size: 30px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"> Profile</h1>
 
                 <form>
                     <div class="form-group">
-                        <input class="form-control" id="exampleInputPassword1" readonly value="prueba">                    </div>
+                        <input class="form-control" id="exampleInputPassword1" readonly value="">                    </div>
                     <br>
                     <div class="form-group">
-                        <input class="form-control" id="exampleInputPassword1" readonly value="prueba">                    </div>
+                        <input class="form-control" id="exampleInputPassword1" readonly value="">                    </div>
                     <br>
                     <div class="form-group">
-                        <input class="form-control" id="exampleInputPassword1" readonly value="prueba">                                             
+                        <input class="form-control" id="exampleInputPassword1" readonly value="">                                             
                     </div>
                     <br>
                     <div class="form-group">
-                        <input class="form-control" id="exampleInputPassword1" readonly value="prueba">                   
+                        <input class="form-control" id="exampleInputPassword1" readonly value="">                   
                     </div>
                     <br>
                 </form>            
             </div>
         </div>
-        <hr size="5px" color="white" />
+        <hr class="hr2">
 
-
-            <div class="row">
-                <div class="col" style="background-color: rgba(17, 185, 101, 0);">
-                    <div class="carrusel">
-                        <ul class="carrusel-fotos">
-                          <li id="foto1"><img src="../public/img/37OWRM2CLBAE7BP5SXKLVMNHZE.jpg" alt=""></li>
-                          <li id="foto2"><img src="../public/img/1654266929_684931_1654267911_noticia_normal.jpg" alt=""></li>
-                          <li id="foto3"><img src="../public/img/1634842.png" alt=""></li>
-                        </ul>
+                        <div class="container">
+                            <h2 class="text-center">Galeria</h2>
+                            <div class="lightbox-gallery">
+                                <div><img src="https://picsum.photos/id/343/300/300" ></div>
+                                <div><img src="https://picsum.photos/id/112/300/300" ></div>
+                                <div><img src="https://picsum.photos/id/155/300/300" ></div>
+                                <div><img src="https://picsum.photos/id/11/300/300"  ></div>
+                                <div><img src="https://picsum.photos/id/434/300/300" ></div>
+                                <div><img src="https://picsum.photos/id/101/300/300" ></div>
+                            </div>
+                          </div>
                         
+                        
+                        <div class="text-center github-link">
+                          
+                          <a class="github-link" href="https://github.com/humbl3man/lightboxify" target="_blank"><i class="fa fa-github"></i></a>
+                          
+                        </div>
                       </div>
                 </div>
         </div>
 
     </div>
-    {% endblock  %}
+    <script src="../public/js/almacenar_imagenes.js"></script>
+
 </body>
 </html>
