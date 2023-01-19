@@ -135,37 +135,22 @@
     75%{margin-left: -300%;}
     100%{margin-left: -300%;}
   }
-  .nav-item{
-    height: 100px;
-  }
+  
 }
 @media screen and (min-width: 1024px) {
+  }
   .navbar-nav, .mr-auto ul{
     margin: 0;
     padding: 0;
-    width: 350px;
-    height: 205px;
-    background-color: #000000bb;
-    border-color:#8889a1;
-    border-style: ridge;
   }
-  
-  li a {
-    display: block;
-    color: rgb(243, 235, 235);
-    padding: 8px 16px;
-    text-decoration: none;
-  }
-  
   /* Change the link color on hover */
   li a:hover {
     background-color: rgb(129, 16, 16);
-    color: rgb(255, 255, 255);
   }
   .circular--square {
       border-radius: 50%;
       position: relative;
-      left: 5px;
+      left: 50px;
       width: 250px;
       height: 250px;
       border: 5px solid rgb(255, 255, 255);
@@ -236,29 +221,26 @@
   }
   h1.pedo{
     
-    width: 220px;
+    width: 400px;
     height: 40px;
     background-position: 20px;
     color: darkred;
-    background-color:#000000bb;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    border-style:double;
-    border-color: #8889a1;
     font-size: 30px;
-    padding-top:0px;
-    border-radius: 40%;
+    margin-top: 20px;
+    left: -500px;    
   }
   .subir{
     width:250px;
     height:40px;
-    margin-top:400px;
+    margin-top:250px;
     font-family:Impact;
     color: #000000bb;
     border-color: rgb(0, 0, 0) !important;
     border-bottom: solid;
     border-radius:50px;
-    --bs-btn-hover-bg: #041836;
-    background-color: #e6e6eb7e;
+    --bs-btn-hover-bg: #0a37b1;
+    background-color: #06cdff;
 
   }
   h1.profile{
@@ -307,13 +289,16 @@
 		cursor: pointer;
 		overflow: hidden;
 		position: absolute;
-		width:  25%;
-		height: 430px;
-		left: 510px;
-		background-color: rgba(141, 61, 114, 0.644);
-		border-radius: 50%;
-		border: 20px inset rgb(94, 91, 47);
-		transition: background-color=red 0.8s linear;
+		width:  250px;
+		height: 250px;
+		left: 590px;
+    top: 100px;
+    background: linear-gradient(
+      25deg,
+      rgb(215, 219, 217),
+      rgb(48, 48, 49)
+    );
+		border: 5px solid rgb(94, 91, 47);
 		z-index: 30;
 		
 	}
@@ -339,9 +324,49 @@
 		height: 100%;
 		object-fit: cover;
 		z-index: 500;
-    border-radius: 40%;
+    border-radius: 50%;
 	}
 	.form-file__result--active {
 		background-color: rgba(82, 81, 79, 0.314);
 	}
-}
+  .v-line{
+    border-left: thick solid white;
+    height:73%;
+    left: 100%;
+    position: absolute;
+    top: 27%;
+   }
+   .v-line1{
+    border-left: thick solid white;
+    height:73%;
+    left: -100%;
+    position: absolute;
+    top: 27%;
+   }
+  .hr1{
+    border: 0;
+    border-top: 5px solid #ffffff; 
+    border-bottom: 2px solid #333;
+    height:0;
+  }
+  .hr2{
+    border: 0;
+    border-top: 5px solid #ffffff; 
+    border-bottom: 2px solid #333;
+    height:0;
+    
+  }
+  .subir1{
+    width:250px;
+    height:40px;
+    margin-top:30px;
+    font-family:Impact;
+    color: #000000bb;
+    border-color: rgb(0, 0, 0) !important;
+    border-bottom: solid;
+    border-radius:50px;
+    --bs-btn-hover-bg: #0aa6b1;
+    background-color: #06ff76;
+
+  }
+   
