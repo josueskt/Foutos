@@ -1,0 +1,33 @@
+.cont{
+    margin: auto;
+    
+    width: 1200px;
+    background-color: rgb(43, 43, 43);
+    display: grid;
+    grid-template-columns: repeat(12 ,100px);
+    grid-template-rows: repeat(5 ,100px);
+}
+.baner{
+
+    border-right:  5px solid white;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.form{
+   
+  grid-column-start: 4;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 4;
+
+}
+.descripcion{
+    
+    border-top: 5px solid white;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}

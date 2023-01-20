@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename ='inicio.css')}}">
+    
+
+</head> 
+<header>
+    {% extends './menu.html' %}
+{% block menu_bar  %}
+
+{{super()}}
+</header>
+
+<body>
+    
+    <div class="ruleta">
+        <div class="carrusel_cont">
+            <button aria-label="anterior" class="carusser_anterior">
+               <  
+            </button>
+            <button aria-label="siguiente" class="carusser_siguiente">
+                >
+            </button>
+
+            <div class="caruserl_lista">
+                <div class="carrusel_element">
+                    <img src="../public/img/inicio/5.png" alt="">
+                </div>
+                <div class="carrusel_element">
+                    <img src="../public/img/inicio/6.png" alt="">
+                </div>
+
+                <div class="carrusel_element">
+                    <img src="../public/img/inicio/7.png" alt="">
+                </div>
+
+                <div class="carrusel_element">
+                    <img src="../public/img/inicio/8.png" alt="">
+                </div>
+
+                <div class="carrusel_element">
+                    <img src="../public/img/inicio/5.png" alt="">
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+        <div role="tablist" class="carusel_ind"></div>
+    </div>
+    <div class="explore_text">
+        <hr>
+        <h1>Explore</h1>
+        <hr>
+    </div>
+    <br>
+    <br>
+    <div class="all_img">
+        <div class="cont">
+            <div class="cont_img">
+                <img src="../public/img/inicio/1.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/2.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/3.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/4.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/1.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/2.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/3.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/4.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/1.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/2.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/3.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/4.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/1.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/2.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/3.jpg" alt="">
+            </div>
+            <div class="cont_img">
+                <img src="../public/img/inicio/4.jpg" alt="">
+            </div>
+
+
+
+        </div>
+    </div>
+    <script  src="{url_for('static',filename ='inicion.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+   {% endblock  %}
+</body>
+<br>
+<br>
+<br>
+<footer>
+
+</footer>
+
+</html>
