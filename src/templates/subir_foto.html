@@ -34,18 +34,23 @@
 				
 					
 				</div>
+	             
+				<div class="col" style= " border-style: groove;margin: 0px; background-color:#000000bb; height: 1000px;">
 		
-				<div class="col" style= " border-style: groove;margin: 40px; background-color:#000000bb; height: 1000px; ">
-		
-				  <form>
+				  <form name="myForm" action="" method="post" onsubmit="return compro()">
 					<br>
-					  <h2 style= "color: aqua;">GOKU</h2>
+					<img class="circular--square" src="../public/img/images (1).png" >
+					<br>
+					<div class="form-group">
+						<label style="font-family:Impact;color: antiquewhite;" for="country"></label>
+						<input class="form-control" >
+					  </div>
 					  <br>
 					  <div class="form-group">
 						<label style="font-family:Impact;color: antiquewhite;" for="country">NOMBRE DE LA FOTO:</label>
-						<input class="form-control" id="exampleInputPassword1" readonly value="prueba">
+						<input class="form-control" id="TipoFoto" >
 					  </div>
-					  <br>
+					 
 					  <div class="heart-btn">
 						<div class="content">
 						  <span class="heart"></span>
@@ -53,38 +58,42 @@
 						  <span class="numb"></span>
 						</div>
 					  </div>
-					  <br>
 					  <div class="heart-btn2">
 						<div class="content2">
 						  <span class="heart2"></span>
 						  <span class="text2">Dislike</span>
 						  <span class="numb2"></span>
 						</div>
-					  </div>
-					  <main class="contenedor">
-						<section class="contenedor-agg-com">
-					  <div class="input-com">
-					  <input id="nuevoComentario" type="text" placeholder="Nuevo nuevoComentario...">
-					  <div class="btn-agg">
-						<button>Comentar</button>
-					  </div>
-					  <div>
-					  </section>
-					  </main>
-					  <ul id="comentarios" class="contenedor-2">
-
-					  </ul>
-					  <br>       
+					  </div>      
 					  <a href="./subir_imagen.html">
-						<button type="button" class="btn btn-outline-primary subir">Subir Foto</button>
+						<input class="btn btn-outline-primary subir" type="submit" class="button" name="EX" value="POSTEAR">
 						  </a>       
 				  </form>
+                    <br>
+				  <main class="contenedor">
+					<section class="contenedor-agg-com">
+						<div class="imagen-usuario">
+
+						</div>
+				  <div class="input-com">
+				  <input id="nuevoComentario" type="text" placeholder="Nuevo Comentario...">
+				  <div class="btn-agg">
+					<button onclick="nComentario()">Comentar</button>
+				  </div>
+				</div>
+			</section>
+		</main>
+				  <ul id="comentarios" class="contenedor-2">
+
+				  </ul>
+
 				</div>
 			  </div>
 			</div>
+            </body>
 			<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 			<script src="../public/js/like.js"></script>
 			<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 			<script src="../public/js/dislike.js"></script>
-            </body>
+			<script src="../public/js/comentarios.js"></script>
             </html>    

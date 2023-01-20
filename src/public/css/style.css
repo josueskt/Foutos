@@ -307,14 +307,14 @@
 		  cursor: pointer;
 		  overflow: hidden;
 		  position: absolute;
-		  width:  25%;
-		  height: 430px;
-		  left: 250px;
+		  width:  40%;
+		  height: 800px;
+		  left: 75px;
 		  background-color: rgba(141, 61, 114, 0.644);
-		  border-radius: 50%;
 		  border: 20px inset rgb(94, 91, 47);
 		  transition: background-color=red 0.8s linear;
 		  z-index: 30;
+		  top: 180px;
 		  
 	  }
 	  .form-file__result::after {
@@ -357,7 +357,7 @@
 	  @import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
 .heart-btn{
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 63%;
   transform: translate(-50%,-50%);
 }
@@ -419,7 +419,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
 .heart-btn2{
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 80%;
   transform: translate(-50%,-50%);
 }
@@ -442,7 +442,7 @@
   height: 100px;
   width: 100px;
   top: 50%;
-  left: 15%;
+  left: 18%;
   transform: translate(-50%,-50%);
 }
 .text2{
@@ -501,14 +501,14 @@
 	::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	background: yellowgreen; 
-	box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5); 
+	box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.7); 
 	}
 	
 	::-webkit-scrollbar-thumb:hover {
 	background: #7bac10;
 	}
 .contenedor{
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.7);
 	width: 590px;
 	height: 120px;
 	display: flex;
@@ -520,7 +520,7 @@
 .contenedor-2{
 	width: 590px;
 	height: auto;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.7);
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -529,10 +529,86 @@
 	gap: 20px;
 	text-transform: capitalize;
 	border-radius: 20px;
+	margin-top: 10px;
 }
 .comentario{
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.7);
 	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 0 0 20px;
+	border-radius: 20px;
+	color: black;
+}
+.contenedor-agg-com{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.input-com{
+	width: 500px;
+	height: 100px;
+	background: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: baseline;
+	gap: 5px;
+}
+#nuevoComentario{
+	outline: none;
+	border: 0;
+	width: 100%;
+	height: 50px;
+	padding: 0px 10px 0px 10px;
+	font-size: 15px;
+	background-color: transparent;
+	color: black;
+	border-bottom: 2px solid rgba(255, 255, 255, 0);
+	transition-duration: 200ms;
+}
+#nuevoComentario::placeholder{
+	color: black;
+}
+#nuevoComentario:focus{
+	border-bottom: 2px solid red;
+}
+.btn-agg{
+	height: 60px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0px 5px 0px 0px;
+}
+button{
+	padding: 12px 20px 12px 20px;
+	border-radius: 20px;
+	border: 0;
+	outline: none;
+	font-size: 15px;
+	cursor: pointer;
+}
+.close{
+	font-size: 12px;
+	position: absolute;
+	right: 220px;
+	width: 20px;
+	z-index: 10;
+	transition-duration: 200ms;
+	display: block;
+	cursor: pointer;
+	color: red;
+}
+.circular--square {
+	border-radius: 50%;
+	position: relative;
+	left: 0px;
+	width: 250px;
+	height: 250px;
+	border: 5px solid rgb(255, 255, 255);
 }
 }
 
