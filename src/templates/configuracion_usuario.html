@@ -37,10 +37,6 @@
               <ul class="navbar-nav mr-auto">
                 <hr class="hr1">
                 <li class="nav-item">
-                    <a class="nav-link" style="margin-top:-17px;height: 117px;font-size:50px;color:rgb(247, 247, 247);" href="#">Contraseña</a>
-                </li>
-                <hr class="hr1">
-                <li class="nav-item">
                     <a class="nav-link" style="margin-top:-17px;height: 117px;font-size:50px;color:rgb(247, 247, 247);" href="./profile.html">Perfíl</a>
                 </li>
                 <hr class="hr2">
@@ -70,33 +66,39 @@
 
         <div class="col" style= "height: 450px;border-style: groove;margin: 20px;background-color:#000000bb;">
 
-          <form>
+          <form name="myForm" action="" method="post" onsubmit="return Comprobar()">
             <br>
-              <div class="form-group">
-                <label style="font-family:Impact;color: antiquewhite;" for="country">Nombre:</label>
-                <input class="form-control" id="exampleInputPassword1" readonly value="">
-              </div>
-              <br>
-              <div class="form-group">
-                <label style="font-family:Impact;color: antiquewhite;" for="country">Correo:</label>
-                <input class="form-control" id="exampleInputPassword1" readonly value="">
-              </div>
-              <br>
-              <div class="form-group">
-                  <label style="font-family:Impact;color: antiquewhite;" for="country">País:</label>
-                  <input class="form-control" id="exampleInputPassword1" readonly value="">          
-              </div>
-              <br>
-              <div class="form-group">
-                  <label style="font-family:Impact;color: antiquewhite;" for="city">Ciudad:</label>
-                  <input class="form-control" id="exampleInputPassword1" readonly value="">                     
-              </div>
-              <button type="button" class="btn btn-outline-primary subir1">Subir Foto</button>
+             <h2  class="CampoForm">Nombre</h2><input type="text"  placeholder="Ingrese su nombre" maxlength="20" id="nombre" name="nombre" required> <br> 
+                       <br>
+             <h2  class="CampoForm">Correo</h2><input type="email" placeholder="Email" id="email" name="email" required> <br> 
+                         <br>
+            <h2  class="CampoForm">País</h2>
+            <select name="pais" id="pais">
+              <option  value="1">Seleccione:</option>
+              <option value="2">España</option>
+              <option value="3">México</option>
+              <option value="4">Guatemala</option>
+              <option value="5">Honduras</option>
+              <option value="7">El Salvador</option>
+              <option value="8">Venezuela</option>
+              <option value="9">Colombia</option>
+              <option value="10">Cuba</option>
+              <option value="11">Bolivia</option>
+              <option value="13">Perú</option>
+              <option value="14">Ecuador</option>
+              <option value="15">Paraguay</option>
+              <option value="16">Uruguay</option>
+              <option value="17">Chile</option>
+              <option value="18">Argentina</option>
+            </select>
+             <input class="btn btn-outline-primary save" type="submit" class="button" name="enviar" value="Guardar">
           </form>
-        </div>
+            </div>
       </div>
     </div>
     <script src="../public/js/configuracion_usuario.js"></script>
+    <script src="../public/js/alertas_configuracion_usuarios.js"></script>
+
     
     
 </body>
