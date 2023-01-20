@@ -4,90 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Validación de Formulario con Javascript</title>
-    <link rel="stylesheet" href="../public/css/Global.css">
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="../public/css/menu.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="../public/css/register_style.css">
+    <link rel="stylesheet" href="{{url_for('static',filename ='register_style.css')}}">
 </head>
-<head>
-    <div class="Bar_menu">
-        <div class="picture">
-            <a href="../vistas/inicio.html"> <img src="/people/src/public/img/foutos.png" alt="foto" height="40px"></a>
-        </div>
-        <div class="central">
-            <div>
-                <a href="../vistas/comunidad.html"><button>Comunidad</button></a>
-                <button> Trending</button>
-                <button> category</button>
-            </div>
-        </div>
-        <a href="">
-            <div class="login">
-                <div>
-                    <h2>asdasd</h2>
-                </div>
-                <div> <img src="https://storage.googleapis.com/uscimages/account.png" alt="" height="35px"></div>
+<header>
+    {% extends './menu.html' %}
+{% block menu_bar  %}
 
-
-
-            </div>
-        </a>
-        <div class="slider_one">
-            <div>
-                <a href="">2D</a>
-
-            </div>
-            <div>
-                <a href="">olio</a>
-
-            </div>
-            <div>
-                <a href="">3D</a>
-
-            </div>
-            <div>
-                <a href="">retrato</a>
-
-            </div>
-            <div>
-                <a href="">animales</a>
-
-            </div>
-            <div>
-                <a href="">Mitologia</a>
-
-            </div>
-        </div>
-        <div class="slider_two">
-            <div>
-                <a href="../vistas/profile.html">usuario</a>
-
-            </div>
-            <div>
-                <a href="../vistas/configuracion_usuario.html">configuracion</a>
-
-            </div>
-            <div>
-                <a href="../vistas/subir_imagen.html">upload</a>
-
-            </div>
-            <div>
-                <a href="">mis fotos</a>
-
-            </div>
-            <div>
-                <a href="">cuentas</a>
-
-            </div>
-            <div>
-                <a href="">cerrar secion </a>
-
-            </div>
-        </div>
-
-    </div>
-</head>
+{{super()}}
+</header>
 <div class="logo">
     <img src="../public/img/logo.png"width = "900px" alt="">
 </div>
@@ -178,5 +105,6 @@
 
 	<script src="../public/js/register.js"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    {% endblock  %}
 </body>
 </html>
