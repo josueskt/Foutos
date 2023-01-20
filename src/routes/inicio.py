@@ -1,10 +1,10 @@
 from flask import Blueprint , render_template 
+<<<<<<< HEAD
 
 
-
-
+=======
 from database.db import get_Conection
-
+>>>>>>> josue
 main=Blueprint('init',__name__)
 
 def traer_imagenes():
