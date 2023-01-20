@@ -1,0 +1,60 @@
+
+  #cuadrado{
+    background: url(../img/moradp.webp); 
+    border-radius: 30px; 
+    margin: auto;
+    width: 400px;
+  }
+  
+  .contenedor2{
+    margin-top:60px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    
+    
+  }
+  
+  .ft-login img{
+    width: 100px;
+    height: 100px;
+  }
+  
+  #separador{
+    height: 50px;
+    
+    
+  }
+  
+  #form2b{
+   
+      width: 90px;
+      height: 30px;   
+      margin: auto;
+      border-radius: 6px;
+      background-color: rgba(45, 23, 65, 0.447);
+      
+  }
+  #form2 button{
+    width: 135px;
+    height: 40px;
+    border-radius: 20px;
+    background: linear-gradient(146deg, rgb(150, 105, 208) 43%, rgba(255,213,250,1) 83%);
+  }
+  .logo{
+    background-color: #252525;
+    width: 100%;
+    
+  }
+  .container_fotos img{
+    background-color:rgba(80, 15, 80, 0.433);
+    width: 420px;
+    height: 450px;
+    border-radius: 6px;
+  }
+  .container{
+    margin: auto;
+    display: grid ;
+    grid-template-columns:200px 500px 1fr;
+  }
+ 
+  
