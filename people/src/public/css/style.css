@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans';
+}
+body{
+	background-color: grey;
+}
+.image{
+	width: 100px;
+	height: 150px;
+	padding: 70px;
+	
+
+}
+.menu-vertical li:hover{
+	background-color: black;
+}
+
+.menu-vertical li a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 15px 15px 15px 20px;
+
+}
+.contenido{
+
+	display: flex;
+	margin: 50px;
+}
+.articulos{
+	width: 70%;
+	border-right: 4px solid black;
+
+}
+.menu-secundario{
+	width: 130%;
+	margin-top: 30px; 
+} 
+
+.menu-secundario a {
+	display: block;
+	text-align: right;
+	color: white; 
+	margin-bottom: 80px;	 	
+}
+input{
+    width: 20%;
+    height: 40px;
+	margin-bottom: 100px;
+	float: right;
+	margin: -50px;
+	
+}

@@ -1,0 +1,55 @@
+.container{
+  margin: auto;
+  display: grid ;
+  grid-template-columns:200px 500px 1fr;
+
+}
+
+.separador-formu{
+  height: 10px;
+}
+
+
+.formulario2{
+  border-radius: 60px;
+  margin: auto;
+  line-height: 22px;
+  width: 50%;
+ background-image: linear-gradient(0, #65739f 0, #474f68 50%, #2b2e36 100%);
+  
+}
+
+.reg{
+  text-align: center;
+  color: white;
+
+}
+.reg > label > input {
+  width: 70%;
+  border-radius: 5px;
+  height: 20px;
+} 
+
+#ree{
+  font-size: 30px;
+  background: rgba(79, 27, 79, 0.504);
+  border-radius: 0%;
+  line-height: 80%;
+  width: 30%;
+  padding: 2%;
+  margin: auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
+}
+
+.container_fotos img{
+  margin-top: 25%;
+  background-color:rgba(80, 15, 80, 0.433);
+  width: 420px;
+  border-radius: 6px;
+}
+.logo{
+  background-color: #252525;
+  width: 100%;
+  
+}
