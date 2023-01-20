@@ -1,3 +1,16 @@
+window.addEventListener('load' , function(){
+    new Glider(document.querySelector('.caruserl_lista'),{
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        draggable: false,
+        dots: '.carusel_ind',
+        arrows: {
+          prev: '.carusser_anterior',
+          next: '.carusser_siguiente'
+        }
+    })
+})
+
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
@@ -104,3 +117,4 @@ formulario.addEventListener('submit', (e) => {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
 });
+>>>>>>>>> Temporary merg branch
