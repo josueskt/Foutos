@@ -1,3 +1,4 @@
+#configuracion de debelop
 from decouple import config
 
 
