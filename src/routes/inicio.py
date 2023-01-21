@@ -7,19 +7,21 @@ from database.db import get_Conection
 
 
 
-from database.db import get_Conection
+
 
 
 main=Blueprint('init',__name__)
 
-def traer_imagenes():
-    conn = get_Conection()
+def obtener(id):
+    conn =get_Conection()
+    lista = None
     with conn.cursor() as cursor:
-        cursor.execute("SELECT * FROM fotos")
-        foto = cursor.fetchone()
+        cursor.execute("SELECT * FROM usuario WHERE id = %s",(id))
+        lista = cursor.fetchone()
         conn.commit()
         conn.close()
-        return foto
+        return lista
+
     
 
 @main.route('/')
@@ -27,3 +29,4 @@ def traer_imagenes():
 def inicio():
     
     return render_template('inicio.html')
+

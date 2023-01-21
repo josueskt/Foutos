@@ -12,3 +12,4 @@ def get_Conection():
         )
     except DatabaseError as ex:
         raise ex
+    #conecion a la base de datos  se llama a get_connection() para hacer primero importan i luego hacen la conecion con este eneto 
