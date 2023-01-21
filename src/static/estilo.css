@@ -150,7 +150,7 @@
   .circular--square {
       border-radius: 50%;
       position: relative;
-      left: 50px;
+      left: 0px;
       width: 250px;
       height: 250px;
       border: 5px solid rgb(255, 255, 255);
@@ -235,7 +235,7 @@
     height:40px;
     margin-top:250px;
     font-family:Impact;
-    color: #000000bb;
+    color: #000000;
     border-color: rgb(0, 0, 0) !important;
     border-bottom: solid;
     border-radius:50px;
@@ -291,7 +291,7 @@
 		position: absolute;
 		width:  250px;
 		height: 250px;
-		left: 590px;
+		left: 615px;
     top: 100px;
     background: linear-gradient(
       25deg,
@@ -331,17 +331,17 @@
 	}
   .v-line{
     border-left: thick solid white;
-    height:73%;
-    left: 100%;
+    height:56%;
+    left: 99%;
     position: absolute;
-    top: 27%;
+    top: 44%;
    }
    .v-line1{
     border-left: thick solid white;
-    height:73%;
+    height:53%;
     left: -100%;
     position: absolute;
-    top: 27%;
+    top: 46%;
    }
   .hr1{
     border: 0;
@@ -356,12 +356,12 @@
     height:0;
     
   }
-  .subir1{
+  .save{
     width:250px;
     height:40px;
-    margin-top:30px;
+    margin-top:50px;
     font-family:Impact;
-    color: #000000bb;
+    color: hsl(0, 0%, 0%);
     border-color: rgb(0, 0, 0) !important;
     border-bottom: solid;
     border-radius:50px;
@@ -369,4 +369,11 @@
     background-color: #06ff76;
 
   }
-   
+  h2.CampoForm{
+    color: #ffffff;
+    font-family:Impact;
+  }
+  .Foto{
+    margin-left: -500px;
+    cursor: pointer;
+  }
