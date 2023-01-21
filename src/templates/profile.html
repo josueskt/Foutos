@@ -13,17 +13,19 @@
     <title>Profile</title>
     <link rel="stylesheet" href="../public/css/estilo.css" type="text/css">
     <link rel="stylesheet" href="../public/css/almacenar_imagenes.css">
-    <link rel="stylesheet" href="../public/css/Global.css">
-    <link rel="stylesheet" href="../public/css/menu.css">
-    <link rel="stylesheet" href="{{url_for('static',filename ='menu.css')}}">
-    <link rel="stylesheet" href="{{url_for('static',filename ='Global.css')}}">
+    
     <link rel="stylesheet" href="{{url_for('static',filename ='estilo.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename ='almacenar_imagenes.css')}}">
+
 
 
 
 </head>
 <header>
-   
+    {% extends './menu.html' %}
+    {% block menu_bar  %}
+    
+    {{super()}}
 </header>
 <body>
     <br>
@@ -83,7 +85,7 @@
         </div>
 
     </div>
-    <script src="../public/js/almacenar_imagenes.js"></script>
 
+    {% endblock  %}
 </body>
 </html>
