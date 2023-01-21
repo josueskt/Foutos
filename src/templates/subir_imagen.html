@@ -2,9 +2,8 @@
 <html>
 	<head >
 		<title>Vista para subir fotos </title>
-		<link rel="stylesheet" href="../public/css/stilo.css" type="text/css">
-		<link rel="stylesheet" href="../public/css/Global.css">
-		<link rel="stylesheet" href="../public/css/Global.css">
+		<link rel="stylesheet" href="{{url_for('static',filename ='stilo.css')}}">
+
 	
 
 	</head>
@@ -53,7 +52,10 @@
 				  </div>
 			</form>
 		</div>
-		<script src="../public/js/vali_campos.js"></script>
-			<script src="../public/js/subir.js"></script>
+
+			<script  src="{url_for('static',filename ='vali_campos.js')}}"></script>
+			<script  src="{url_for('static',filename ='subir.js')}}"></script>
+
+
 		</body>
 		</html>
