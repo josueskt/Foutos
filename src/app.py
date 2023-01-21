@@ -29,6 +29,11 @@ app.register_blueprint(ruta_uno.main , url_prefix='/ruta_uno')
 app.register_blueprint(inicio.main ,url_prefix='/main')
 app.register_blueprint(register.main ,url_prefix='/register')
 app.register_blueprint(login.main ,url_prefix='/login')
+app.register_blueprint(profile.main , url_prefix = '/subir_foto')
+app.register_blueprint(profile.main , url_prefix = '/subir_imagen')
+
+
+
 
 app.register_blueprint(configuracion.main ,url_prefix='/user/config')
 app.register_blueprint(profile.main , url_prefix = '/profile')
