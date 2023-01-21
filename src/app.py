@@ -11,7 +11,7 @@ from models.entitis.user import User
 #rutas  de html para la api 
 from routes import ruta_uno
 from routes import inicio
-
+from routes import login
 from routes import register
 from routes import subir_foto
 
@@ -41,16 +41,18 @@ app.register_blueprint(comunidad.main ,url_prefix = '/comunidad')
 app.register_blueprint(subir_foto.main ,url_prefix='/upload/foto')
     
 
+
 main=Blueprint('login',__name__)
 
 @app.route('/')
 def index():
     return redirect(url_for('login'))
+
 @app.route('/login' ,methods=['GET','POST'])
 def login():
     if request.method == 'POST':
         conn = get_Conection() 
-        user = User(0,request.form['nombre'],request.form['password'])
+        user = User(0,request.form['correo'],request.form['password'])
         logged =modelUser.login(conn,user) 
         if logged != None:
             if logged.password:
@@ -60,6 +62,8 @@ def login():
          return render_template('login.html')
     else:
        return render_template('login.html')
+   
+
 
     
 if __name__ == '__main__':
