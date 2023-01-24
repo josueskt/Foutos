@@ -28,7 +28,6 @@ app.config.from_object(config['development'])
 app.register_blueprint(ruta_uno.main , url_prefix='/ruta_uno')
 app.register_blueprint(inicio.main ,url_prefix='/main')
 app.register_blueprint(register.main ,url_prefix='/register')
-app.register_blueprint(login.main ,url_prefix='/login')
 
 app.register_blueprint(configuracion.main ,url_prefix='/user/config')
 app.register_blueprint(profile.main , url_prefix = '/profile')
@@ -43,3 +42,8 @@ def login():
 if __name__ == '__main__':
     app.register_error_handler(404 , no_encontrado)
     app.run(debug = True) 
+    
+
+
+
+
