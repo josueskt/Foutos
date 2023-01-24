@@ -1,26 +1,14 @@
-from flask import Blueprint , render_template  ,request,redirect,url_for
-from models.modelUser import modelUser
+from flask import Blueprint , render_template  
 
-from database.db import get_Conection
+from flask import  render_template
 
 #entidades 
-from models.entitis.user import User
+
 
 
 main=Blueprint('login',__name__)
 
-@main.route('/login' ,methods=['GET','POST'])
+@main.route('/', )
 def login():
-    if request.method == 'POST':
-        conn = get_Conection() 
-        user = User(0,request.form['correo'],request.form['password'])
-        logged =modelUser.login(conn,user) 
-        if logged != None:
-            if logged.password:
-                return redirect(url_for('main'))
-        else:
-        
-         return render_template('login.html')
-    else:
-       return render_template('login.html')
-   
+    
+    return render_template('login.html')

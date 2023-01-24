@@ -1,11 +1,15 @@
-from flask import Flask , Blueprint ,render_template ,redirect ,url_for ,request , flash
+
 from confg import config
-from models.modelUser import modelUser
+from flask import Flask, request, session, redirect, url_for, render_template, flash , blueprints
+import psycopg2 #pip install psycopg2 
+import psycopg2.extras
+import re 
+from werkzeug.security import generate_password_hash, check_password_hash
 
 from database.db import get_Conection
 
 #entidades 
-from models.entitis.user import User
+
 
 
 #rutas  de html para la api 
@@ -41,35 +45,103 @@ app.register_blueprint(comunidad.main ,url_prefix = '/comunidad')
 app.register_blueprint(subir_foto.main ,url_prefix='/upload/foto')
     
 
-
+conn = get_Conection()
 
 
 @app.route('/')
-def index():
+def home():
+    # Check if user is loggedin
+    if 'loggedin' in session:
+    
+        # User is loggedin show them the home page
+        return render_template('home.html', username=session['username'])
+    # User is not loggedin redirect to login page
     return redirect(url_for('login'))
-
-
-
-@app.route('/register',methods=['GET','POST'])
+ 
+@app.route('/login/', methods=['GET', 'POST'])
+def login():
+    cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+   
+   
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+        username = request.form['username']
+        password = request.form['password']
+        print(password)
+ 
+        # Check if account exists using MySQL
+        cursor.execute('SELECT * FROM users WHERE username = %s', (username,))
+        # Fetch one record and return result
+        account = cursor.fetchone()
+ 
+        if account:
+            password_rs = account['password']
+            print(password_rs)
+        
+            if check_password_hash(password_rs, password):
+                session['loggedin'] = True
+                session['id'] = account['id']
+                session['username'] = account['username']
+               
+                return redirect(url_for('home'))
+            else:
+                
+                flash('Incorrect username/password')
+        else:
+            
+            flash('Incorrect username/password')
+ 
+    return render_template('login.html')
+  
+@app.route('/register', methods=['GET', 'POST'])
 def register():
-                            
-     if request.method == 'POST':
-          
-          nombre = request.form['nombre']
-          apellido =  request.form['apellido']
-          password = request.form['password']
-          correo = request.form['correo']
-          telefono = request.form['telefono'] 
-          coon = get_Conection()
-          
-          with coon.cursor() as cursor:
-           cursor.execute('INSERT INTO usuario(nombre,apellido,password,correo,telefono) VALUES(%s,%s,%s,%s,%s)',
-          (nombre,apellido,password,correo,telefono))
-           
-           coon.commit()
-           coon.close()
-     else:      
-      return render_template('register.html')
+    cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+ 
+   
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form:
+    
+        fullname = request.form['fullname']
+        username = request.form['username']
+        password = request.form['password']
+        email = request.form['email']
+    
+        _hashed_password = generate_password_hash(password)
+ 
+        #Check if account exists using MySQL
+        cursor.execute('SELECT * FROM users WHERE username = %s', (username,))
+        account = cursor.fetchone()
+        print(account)
+       
+        if account:
+            flash('Account already exists!')
+        elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
+            flash('Invalid email address!')
+        elif not re.match(r'[A-Za-z0-9]+', username):
+            flash('Username must contain only characters and numbers!')
+        elif not username or not password or not email:
+            flash('Please fill out the form!')
+        else:
+            # Account doesnt exists and the form data is valid, now insert new account into users table
+            cursor.execute("INSERT INTO users (fullname, username, password, email) VALUES (%s,%s,%s,%s)", (fullname, username, _hashed_password, email))
+            conn.commit()
+            flash('You have successfully registered!')
+    elif request.method == 'POST':
+       
+        flash('Please fill out the form!')
+   
+    return render_template('register.html')
+   
+   
+@app.route('/logout')
+def logout():
+    
+   session.pop('loggedin', None)
+   session.pop('id', None)
+   session.pop('username', None)
+  
+   return redirect(url_for('login'))
+
+
+
 
 
     
