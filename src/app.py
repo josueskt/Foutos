@@ -45,7 +45,7 @@ app.register_blueprint(comunidad.main ,url_prefix = '/comunidad')
 app.register_blueprint(subir_foto.main ,url_prefix='/upload/foto')
     
 
-conn = get_Conection()
+conn =get_Conection()
 
 
 @app.route('/')
