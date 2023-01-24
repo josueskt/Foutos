@@ -3,6 +3,7 @@ from decouple import config
 
 
 
+
 class Config:
     secret_key=config("secret_key")
     

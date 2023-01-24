@@ -7,6 +7,12 @@
 	
 
 	</head>
+	<header>
+		{% extends './menu.html' %}
+		{% block menu_bar  %}
+		
+		{{super()}}
+		</header>
    		<body>
 			<div class="col" style="width:1400px;height: 1130px;border-color: rgb(50, 50, 50);border-style: groove;margin: 60px;background-color:#00000070;">    
 		<form name="myForm" action="" method="post" onsubmit="return Comprobar()">
@@ -56,6 +62,6 @@
 			<script  src="{url_for('static',filename ='vali_campos.js')}}"></script>
 			<script  src="{url_for('static',filename ='subir.js')}}"></script>
 
-
+			{% endblock  %}
 		</body>
 		</html>
