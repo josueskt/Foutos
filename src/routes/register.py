@@ -1,7 +1,9 @@
-from flask import Blueprint , render_template 
-
+from flask import flash, Blueprint , render_template ,request,redirect,url_for
+from database.db import get_Conection
 main=Blueprint('register',__name__)
 
+
 @main.route('/')
-def inicio():
-    return render_template('register.html')
+def register():
+    
+     return render_template('register.html')
