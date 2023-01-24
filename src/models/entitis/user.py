@@ -9,7 +9,7 @@ class User():
         self.contasea = contasea
         self.id_comunidad = id_comunidad
     @classmethod
-    def check_pas(self,hashed_password,pasword):
+    def check_pas(self,hashed_password,contasea):
         return self.check_password(hashed_password)
     
-    print(generate_password_hash("aasdasd"))
+    print(generate_password_hash("josue"))

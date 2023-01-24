@@ -11,20 +11,21 @@ from database.db import get_Conection
 
 
 main=Blueprint('init',__name__)
-
-def obtener(id):
+def obtener():
     conn =get_Conection()
     lista = None
     with conn.cursor() as cursor:
-        cursor.execute("SELECT * FROM usuario WHERE id = %s",(id))
+        cursor.execute("SELECT * FROM usuario " )
         lista = cursor.fetchone()
         conn.commit()
         conn.close()
         return lista
+@main.route('/')
+
 
     
 
-@main.route('/')
+
 
 def inicio():
     

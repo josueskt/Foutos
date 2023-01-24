@@ -32,15 +32,7 @@ app.config.from_object(config['development'])
 #asignacion rutas o creacion de rutas 
 app.register_blueprint(ruta_uno.main , url_prefix='/ruta_uno')
 app.register_blueprint(inicio.main ,url_prefix='/main')
-app.register_blueprint(register.main ,url_prefix='/register')
-<<<<<<< HEAD
-app.register_blueprint(login.main ,url_prefix='/login')
-app.register_blueprint(profile.main , url_prefix = '/subir_foto')
-app.register_blueprint(profile.main , url_prefix = '/subir_imagen')
 
-
-=======
->>>>>>> josue
 
 
 app.register_blueprint(configuracion.main ,url_prefix='/user/config')
@@ -50,27 +42,34 @@ app.register_blueprint(subir_foto.main ,url_prefix='/upload/foto')
     
 
 
-main=Blueprint('login',__name__)
+
 
 @app.route('/')
 def index():
     return redirect(url_for('login'))
 
-@app.route('/login' ,methods=['GET','POST'])
-def login():
-    if request.method == 'POST':
-        conn = get_Conection() 
-        user = User(0,request.form['correo'],request.form['password'])
-        logged =modelUser.login(conn,user) 
-        if logged != None:
-            if logged.password:
-                return redirect(url_for('main'))
-        else:
-        
-         return render_template('login.html')
-    else:
-       return render_template('login.html')
-   
+
+
+@app.route('/register',methods=['GET','POST'])
+def register():
+                            
+     if request.method == 'POST':
+          
+          nombre = request.form['nombre']
+          apellido =  request.form['apellido']
+          password = request.form['password']
+          correo = request.form['correo']
+          telefono = request.form['telefono'] 
+          coon = get_Conection()
+          
+          with coon.cursor() as cursor:
+           cursor.execute('INSERT INTO usuario(nombre,apellido,password,correo,telefono) VALUES(%s,%s,%s,%s,%s)',
+          (nombre,apellido,password,correo,telefono))
+           
+           coon.commit()
+           coon.close()
+     else:      
+      return render_template('register.html')
 
 
     
