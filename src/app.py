@@ -40,7 +40,6 @@ app.register_blueprint(register.main ,url_prefix='/register')
 
 
 
-
 app.register_blueprint(configuracion.main ,url_prefix='/user/config')
 app.register_blueprint(profile.main , url_prefix = '/profile')
 app.register_blueprint(comunidad.main ,url_prefix = '/comunidad')
