@@ -2,12 +2,6 @@ from flask import Blueprint , render_template
 
 
 
-from database.db import get_Conection
-
-
-
-
-
 
 
 main=Blueprint('init',__name__)
