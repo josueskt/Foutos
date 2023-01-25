@@ -6,7 +6,7 @@ def get_Conection():
     
  
     DB_HOST = "localhost"
-    DB_NAME = "practica"
+    DB_NAME = "foutos"
     DB_USER = "postgres"
     DB_PASS = "magodeoz100"
  

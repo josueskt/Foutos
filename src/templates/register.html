@@ -18,36 +18,28 @@
     <h5>Register New user or login existing account</h5>
      <form action="{{ url_for('register') }}" method="post" autocomplete="off"> 
       <div class="form-group">
-       <label for="name" class="cols-sm-2 control-label">Your Name</label>
+       <label for="name" class="cols-sm-2 control-label">nombre</label>
        <div class="cols-sm-10">
         <div class="input-group">
          <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-         <input type="text" class="form-control" name="fullname" id="fullname"  placeholder="Enter your Name"/>
-        </div>
-       </div>
-      </div>
-      <div class="form-group">
-       <label for="email" class="cols-sm-2 control-label">Your Email</label>
-       <div class="cols-sm-10">
-        <div class="input-group">
-         <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-         <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+         <input type="text" class="form-control" name="fullname" id="fullname"  placeholder="ingresa tu nombre"/>
         </div>
        </div>
       </div>
   
+  
       <div class="form-group">
-       <label for="username" class="cols-sm-2 control-label">Username</label>
+       <label for="username" class="cols-sm-2 control-label">correo</label>
        <div class="cols-sm-10">
         <div class="input-group">
          <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-         <input type="text" class="form-control" name="username" id="username" placeholder="Enter your Username" required>
+         <input type="email" class="form-control" name="username" id="username" placeholder="correo" required>
         </div>
        </div>
       </div>
   
       <div class="form-group">
-       <label for="password" class="cols-sm-2 control-label">Password</label>
+       <label for="password" class="cols-sm-2 control-label">contraseña</label>
        <div class="cols-sm-10">
         <div class="input-group">
          <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
