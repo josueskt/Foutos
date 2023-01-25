@@ -1,0 +1,12 @@
+.lgo{
+	background-color: #252525;
+	height: 100px;
+}
+.login-box{
+	padding-top: 100px;
+	color: azure;
+	
+ display: grid;
+ grid-template-columns: 600px 400px;	
+
+}
