@@ -39,7 +39,7 @@
             <div class="login" >
               
                 <div>
-                   <h2> {{ username }}</h2>
+                   <h2> {{account['fullname']}}</h2>
                    
                 </div>
                 <div class="userimg"><img src="https://storage.googleapis.com/uscimages/account.png" alt="" height="35px" id="close-open"></div>
@@ -80,7 +80,7 @@
 
             </div>
             <div>
-                <a href="../user/config">configuracion</a>
+                <a href="{{ url_for('profile') }}">configuracion</a>
 
             </div>
             <div>
@@ -96,7 +96,7 @@
 
             </div>
             <div>
-                <a href="">cerrar secion </a>
+                <a href="{{ url_for('logout') }}">cerrar secion </a>
 
             </div>
         </div>

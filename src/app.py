@@ -27,13 +27,13 @@ def login():
         account = cursor.fetchone()
  
         if account:
-            password_rs = account['password']
+            password_rs = account['comtrasea']
             print(password_rs)
             # If account exists in users table in out database
             if check_password_hash(password_rs, password):
                 # Create session data, we can access this data in other routes
                 session['loggedin'] = True
-                session['id'] = account['id']
+                session['id'] = account['id_user']
                 session['username'] = account['username']
                 # Redirect to home page
                 return redirect(url_for('Inicio.profile'))
@@ -51,12 +51,12 @@ def register():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
  
     # Check if "username", "password" and "email" POST requests exist (user submitted form)
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form:
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form :
         # Create variables for easy access
         fullname = request.form['fullname']
         username = request.form['username']
         password = request.form['password']
-        email = request.form['email']
+        
     
         _hashed_password = generate_password_hash(password)
  
@@ -67,15 +67,14 @@ def register():
         # If account exists show error and validation checks
         if account:
             flash('Account already exists!')
-        elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
+        elif not re.match(r'[^@]+@[^@]+\.[^@]+', username):
             flash('Invalid email address!')
-        elif not re.match(r'[A-Za-z0-9]+', username):
-            flash('Username must contain only characters and numbers!')
-        elif not username or not password or not email:
+      
+        elif not username or not password :
             flash('Please fill out the form!')
         else:
             # Account doesnt exists and the form data is valid, now insert new account into users table
-            cursor.execute("INSERT INTO users (fullname, username, password, email) VALUES (%s,%s,%s,%s)", (fullname, username, _hashed_password, email))
+            cursor.execute("INSERT INTO users (fullname, username, comtrasea) VALUES (%s,%s,%s)", (fullname, username, _hashed_password))
             conn.commit()
             flash('You have successfully registered!')
     elif request.method == 'POST':
@@ -97,10 +96,10 @@ def logout():
 @app.route('/profile')
 def profile(): 
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-   
+    
     # Check if user is loggedin
     if 'loggedin' in session:
-        cursor.execute('SELECT * FROM users WHERE id = %s', [session['id']])
+        cursor.execute('SELECT * FROM users WHERE id_user = %s', [session['id']])
         account = cursor.fetchone()
         # Show the profile page with account info
         return render_template('profile.html', account=account)
