@@ -14,6 +14,7 @@ def profile():
         account = cursor.fetchone()
         cursor.execute('SELECT imagen FROM foto')
         foto = cursor.fetchall()
+        print(foto)
         
         
     return render_template('inicio.html', account =account , foto =foto)
