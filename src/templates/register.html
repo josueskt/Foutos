@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <link rel="icon" href="https://e7.pngegg.com/pngimages/182/19/png-clipart-square-shape-blue-square-s-angle-white.png" type="image/x-icon">
-
   <meta charset="utf-8">
   <title>Register</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -10,6 +8,7 @@
   <!-- Google Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{url_for('static',filename ='Global.css')}}">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
  </head>
  <body style="background-color:#ccc;">
@@ -19,35 +18,34 @@
     <h5>Register New user or login existing account</h5>
      <form action="{{ url_for('register') }}" method="post" autocomplete="off"> 
       <div class="form-group">
-       <label for="name" class="cols-sm-2 control-label">nombre</label>
+       <label for="name" class="cols-sm-2 control-label">Your Name</label>
        <div class="cols-sm-10">
         <div class="input-group">
          <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-         <input type="text" class="form-control" name="nombre" id="fullname"  placeholder="Enter your Name"/>
+         <input type="text" class="form-control" name="fullname" id="fullname"  placeholder="Enter your Name"/>
         </div>
        </div>
       </div>
       <div class="form-group">
-        <label for="username" class="cols-sm-2 control-label">apellido</label>
-        <div class="cols-sm-10">
-         <div class="input-group">
-          <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-          <input type="text" class="form-control" name="apellido" id="username" placeholder="Enter your Username" required>
-         </div>
-        </div>
-       </div>
-   
-      <div class="form-group">
-       <label for="email" class="cols-sm-2 control-label">correo</label>
+       <label for="email" class="cols-sm-2 control-label">Your Email</label>
        <div class="cols-sm-10">
         <div class="input-group">
          <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-         <input type="text" class="form-control" name="correo" id="email"  placeholder="Enter your Email"/>
+         <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
         </div>
        </div>
       </div>
   
-    
+      <div class="form-group">
+       <label for="username" class="cols-sm-2 control-label">Username</label>
+       <div class="cols-sm-10">
+        <div class="input-group">
+         <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+         <input type="text" class="form-control" name="username" id="username" placeholder="Enter your Username" required>
+        </div>
+       </div>
+      </div>
+  
       <div class="form-group">
        <label for="password" class="cols-sm-2 control-label">Password</label>
        <div class="cols-sm-10">

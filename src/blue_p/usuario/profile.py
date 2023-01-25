@@ -4,7 +4,7 @@ perfil=Blueprint('profile',__name__,url_prefix='/')
 @perfil.route('/')
 def home():
   
-    return redirect(url_for('register.login'))
+    return redirect(url_for('login'))
 
 @perfil.route('/perfil')
 def profile():
