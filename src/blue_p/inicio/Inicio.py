@@ -15,18 +15,22 @@ def profile():
         account = cursor.fetchone()
         cursor.execute('SELECT id_foto , imagen FROM foto')
         Fot= cursor.fetchall()
+        cursor.execute('SELECT imagen FROM foto')
+        Fo= cursor.fetchall()
         
      
 
-        items = Fot
+        items = Fo
         n = len(Fot)
-        i=0
-        while i <=n:
+        i=1
+        fo = []
+        while i < n:
             i+=1
             x = sample(items,  1)
-            fotos = []
-            fotos.insert(i,x)
-        print(fotos)
+            
+            fo.append(x)
+        
+        print(fo[1])
         
         
     return render_template('inicio.html', account =account , Fot = Fot)
