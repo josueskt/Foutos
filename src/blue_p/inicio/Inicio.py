@@ -19,9 +19,14 @@ def profile():
      
 
         items = Fot
-
-        x = sample(items,  1)   # Pick a random item from the list
-       
+        n = len(Fot)
+        i=0
+        while i <=n:
+            i+=1
+            x = sample(items,  1)
+            fotos = []
+            fotos.insert(i,x)
+        print(fotos)
         
         
     return render_template('inicio.html', account =account , Fot = Fot)
