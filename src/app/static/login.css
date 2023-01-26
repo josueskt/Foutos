@@ -3,10 +3,27 @@
 	height: 100px;
 }
 .login-box{
-	padding-top: 100px;
+	padding-top: 50px;
 	color: azure;
 	
  display: grid;
  grid-template-columns: 600px 400px;	
 
+}
+.login-header{
+	border-right: 5px dashed white;
+}
+.login-body{
+	
+	width: 110%;
+	height: 110%;
+	border-radius: 15px;
+	background-image: url(img/moradp.webp);
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+}
+.btn-success  {
+	background-color: rgb(255, 136, 136);
 }

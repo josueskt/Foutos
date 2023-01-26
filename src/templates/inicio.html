@@ -23,6 +23,11 @@
 
 <body>
     
+    <div class="explore_text">
+        <hr>
+        <h1>Canales</h1>
+        <hr>
+    </div>
     <div class="ruleta">
         <div class="carrusel_cont">
             <button aria-label="anterior" class="carusser_anterior">
@@ -37,6 +42,8 @@
                     <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
                   </svg>
             </button>
+
+            
 
             <div class="caruserl_lista">
                 <div class="carrusel_element">
@@ -75,21 +82,14 @@
     <br>
     <div class="all_img">
         <div class="cont">
+           
+           {%for id_foto in Fot %}
             <div class="cont_img">
-                <img src="{{url_for('static',filename ='img/imagen1.jpg')}}" alt="">
-            </div>
-            <div class="cont_img">
-                <img src="{{url_for('static',filename ='img/imagen 3.png')}}" alt="">
-            </div>
-            <div class="cont_img">
-                <img src="{{url_for('static',filename ='img/imagen2.jpg')}}" alt="">
-            </div>
-            <div class="cont_img">
-                <img src="{{url_for('static',filename ='img/imagen4.jpeg')}}" alt="">
-            </div>
-
-
-
+                <img src="./static/img/todos/{{ id_foto.imagen }}" alt="">
+             </div>
+            
+            {% endfor %}                                                
+          
         </div>
     </div>
     <script  src="{url_for('static',filename ='inicion.js')}}"></script>

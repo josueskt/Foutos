@@ -32,6 +32,9 @@
                 <label>Password</label>
                 <input type="password" class="form-control" name="password" placeholder="contraseña" id="password"
                     required>
+<br>
+<br>
+<br>
 
                 <input type="submit" value="Login" class="form-control btn btn-success " name="">
             </form>
@@ -41,13 +44,13 @@
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {{ message }}
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">×</span>
+                    <span aria-hidden="true"></span>
                 </button>
             </div>
             {% endfor %}
             {% endif %}
             {% endwith %}
-            <p>No account <a href="{{ url_for('register') }}">Register</a></p>
+            <p>No tienes cuenta ..<a href="{{ url_for('register') }}">Registrate</a></p>
         </div>
         
     </div>

@@ -14,27 +14,32 @@
 		{{super()}}
 		</header>
    		<body>
-			<div class="col" style="width:1400px;height: 1130px;border-color: rgb(50, 50, 50);border-style: groove;margin: 60px;background-color:#00000070;">    
+			<br>
+			<br>
+			
+	<div class="registro" >
+			<div class="col" >    
 		<form name="myForm" action="" method="post" onsubmit="return Comprobar()">
 			<form action="">
-				<h1 style="font-size: 30px;margin-left:90px">TITULO</h1>
+				<h1 style="font-size: 30px; ">TITULO</h1>
 				<br/>
-				<input id="titul" type="text" class="field" >  
+				<input id="titul" type="text" class="field"  >  
 				
-				<br/><br/>
-				<br/>
+				<br>
+				<br>
+				<br>
 
-				<h1 style="font-size: 30px;margin-left:90px">DESCRIPCION</h1>
+				<h1 style="font-size: 30px;">DESCRIPCION</h1>
 
-				<br/>
+				<br>
 
 				<textarea id="descrip" class="field" ></textarea> 
 				
-				<br/><br/>
+				<br><br>
 
-				<h1 style="font-size: 30px;margin-left:90px">FOTOS</h1>
+				<h1 style="font-size: 30px;">FOTOS</h1>
 
-				<br/><br/>
+				<br><br>
 
 				<div class="form-file">
 					<div class="form-file__action">
@@ -47,21 +52,23 @@
 					</div>
 				</div>
 				
+				
 				<br/>
 				<br/>
 				<br/>
 
-				<div class="col">
-					  <a href="../vistas/profile.html">
-						<input class="btn btn-outline-primary subir" type="submit" class="button" name="enviar" value="PUBLICAR">
-					  </a>
+				<div class="col_two">
+					
+						<input  type="submit" class="button" name="enviar" value="PUBLICAR">
+					
 				  </div>
 			</form>
 		</div>
 
-			<script  src="{url_for('static',filename ='vali_campos.js')}}"></script>
-			<script  src="{url_for('static',filename ='subir.js')}}"></script>
+			<script  src="{url_for('static',filename ='script/vali_campos.js')}}"></script>
+			<script  src="{url_for('static',filename ='script/subir.js')}}"></script>
 
 			{% endblock  %}
+	</div>
 		</body>
 		</html>

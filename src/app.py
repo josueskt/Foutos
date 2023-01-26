@@ -43,6 +43,7 @@ def login():
         else:
             # Account doesnt exist or username/password incorrect
             flash('Incorrect username/password')
+    
  
     return render_template('login.html')
   
@@ -66,16 +67,17 @@ def register():
         print(account)
         # If account exists show error and validation checks
         if account:
-            flash('Account already exists!')
+            flash('la cuenta ya existe!')
         elif not re.match(r'[^@]+@[^@]+\.[^@]+', username):
-            flash('Invalid email address!')
+            flash('e-mail invalido')
       
-        elif not username or not password :
-            flash('Please fill out the form!')
+        elif not username or not password or not fullname :
+            flash('por favor  llene todos los campos ')
         else:
             # Account doesnt exists and the form data is valid, now insert new account into users table
             cursor.execute("INSERT INTO users (fullname, username, comtrasea) VALUES (%s,%s,%s)", (fullname, username, _hashed_password))
             conn.commit()
+            return redirect(url_for('login'))
             flash('You have successfully registered!')
     elif request.method == 'POST':
         # Form is empty... (no POST data)

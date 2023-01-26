@@ -42,7 +42,7 @@
                    <h2> {{account['fullname']}}</h2>
                    
                 </div>
-                <div class="userimg"><img src="https://storage.googleapis.com/uscimages/account.png" alt="" height="35px" id="close-open"></div>
+                <div class="userimg">  <img src="{{url_for('static',filename ='img/imagenlogin.png')}}" alt=""  height="35px" id="close-open"></div>
 
 
 
@@ -84,7 +84,7 @@
 
             </div>
             <div>
-                <a href="../upload/foto">upload</a>
+                <a href="{{ url_for('subirfoto.subirfoto') }}">upload</a>
 
             </div>
             <div>
