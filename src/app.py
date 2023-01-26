@@ -14,9 +14,10 @@ app = c_app()
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-   
+    if 'loggedin' in session:
+        return redirect(url_for('Inicio.profile'))
     # Check if "username" and "password" POST requests exist (user submitted form)
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+    elif request.method == 'POST' and 'username' in request.form and 'password' in request.form:
         username = request.form['username']
         password = request.form['password']
         print(password)

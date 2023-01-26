@@ -4,7 +4,11 @@
   grid-template-columns:400px 100px 1fr;
  
 }
-
+.lgo{
+  
+	background-color: #252525;
+	height: 100px;
+}
 
 .separador-formu{
   height: 10px;
