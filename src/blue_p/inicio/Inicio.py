@@ -13,7 +13,7 @@ def profile():
     if 'loggedin' in session:
         cursor.execute('SELECT * FROM users WHERE id_user = %s', [session['id']])
         account = cursor.fetchone()
-        cursor.execute('SELECT id_foto , imagen FROM foto')
+        cursor.execute('SELECT id_foto , imagen FROM foto ORDER BY random() ')
         Fot= cursor.fetchall()
        
         

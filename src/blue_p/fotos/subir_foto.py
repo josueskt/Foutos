@@ -1,10 +1,10 @@
-from flask import Blueprint , render_template 
+from flask import Blueprint , render_template ,request , redirect , url_for
 from flask import session
 from  database.db import get_Conection
 import psycopg2
 fotos=Blueprint('subirfoto',__name__,url_prefix='/')
 conn=get_Conection()
-@fotos.route('/subirimagen')
+@fotos.route('/subirfoto')
 def subirfoto():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     
@@ -17,3 +17,7 @@ def subirfoto():
         
         
     return render_template('subir_imagen.html', account =account )
+
+  
+        
+        

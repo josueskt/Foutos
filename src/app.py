@@ -20,7 +20,7 @@ def login():
     elif request.method == 'POST' and 'username' in request.form and 'password' in request.form:
         username = request.form['username']
         password = request.form['password']
-        print(password)
+      
  
         # Check if account exists using MySQL
         cursor.execute('SELECT * FROM users WHERE username = %s', (username,))

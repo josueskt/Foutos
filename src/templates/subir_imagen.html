@@ -17,13 +17,13 @@
 			<br>
 			<br>
 			
-	<div class="registro" >
-			<div class="col" >    
-		<form name="myForm" action="" method="post" onsubmit="return Comprobar()">
-			<form action="">
+<div class="registro" >
+	<div class="col" >    
+		<form  action="{{ url_for('subirimagen.imagen') }}" method="post" onsubmit="return Comprobar()">
+			
 				<h1 style="font-size: 30px; ">TITULO</h1>
 				<br/>
-				<input id="titul" type="text" class="field"  >  
+				<input id="titulo" type="text" class="field" name ="titulo" >  
 				
 				<br>
 				<br>
@@ -33,7 +33,7 @@
 
 				<br>
 
-				<textarea id="descrip" class="field" ></textarea> 
+				<input type="text" id="descripcion" class="field" name="descripcion" ></input> 
 				
 				<br><br>
 
@@ -45,7 +45,7 @@
 					<div class="form-file__action">
 						<label for="image" class="title"></label>
 
-						<input type="file" name="image" id="image" >
+						<input type="file" name="imagen" id="imagen" >
 					</div>
 					<div class="form-file__result" id="result-image">
 						<img id="img-result" alt="" />
@@ -61,9 +61,9 @@
 					
 						<input  type="submit" class="button" name="enviar" value="PUBLICAR">
 					
-				  </div>
+				</div>
 			</form>
-		</div>
+	</div>
 
 			<script  src="{url_for('static',filename ='script/vali_campos.js')}}"></script>
 			<script  src="{url_for('static',filename ='script/subir.js')}}"></script>

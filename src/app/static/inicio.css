@@ -59,13 +59,13 @@
 }
 .cont{
     
-    margin: 80px;
+    
     display: grid;
-    grid-template-columns: repeat( 5, auto);
+    grid-template-columns: repeat( 6, auto);
 }
 .cont_img img{
     width: 200px;
-    padding: 2px;
+    padding-bottom: 15px;
     border-radius: 3px;
    
 }
