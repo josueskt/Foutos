@@ -2,17 +2,25 @@ from flask import Flask, request, session, redirect, url_for, render_template, f
 import psycopg2 #pip install psycopg2 
 import psycopg2.extras
 import re 
+import os
+from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 from database.db import get_Conection
 conn = get_Conection()
 from app import c_app
 
 
+
 #entidades 
 
 app = c_app()
+UPLOAD_FOLDER = 'C:\\Users\\Alexis\\OneDrive\\Escritorio\\AE\Pro2\\src\\app\\static\\img\\todos'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
+    
+
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     if 'loggedin' in session:
         return redirect(url_for('Inicio.profile'))
@@ -110,7 +118,57 @@ def profile():
     return redirect(url_for('login'))
 
 #registra un error y lo manda al html 
+#subir foto
+conn=get_Conection()
+
+
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+@app.route('/subirimagen', methods=['GET'])
+def imagen():
+    cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     
+    # Check if user is loggedin
+    if 'loggedin' in session:
+        cursor.execute('SELECT * FROM users WHERE id_user = %s', [session['id']])
+        account = cursor.fetchone()
+        
+    
+    
+    
+
+        
+    return render_template('subir_imagen.html', account =account )
+
+@app.route('/subirimagen', methods=['POST'])
+def subir(): 
+        cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    
+        titulo = request.form['titulo']
+        descripcion= request.form['descripcion']
+        file = request.files['file']
+        
+        if file.filename == '':
+            flash('No image selected for uploading')
+            return redirect(request.url)
+        
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+               
+            cursor.execute('INSERT INTO foto (titulo,descripcion,id_user,imagen) VALUES(%s,%s,%s,%s)',(titulo,descripcion,session['id'],filename,))
+            print('enviado')
+            return redirect(url_for('Inicio.profile')) 
+               
+
+
+
 if __name__ == '__main__':
     
     app.run(debug = True) 
+    
+    
+    

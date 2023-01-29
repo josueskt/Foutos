@@ -19,7 +19,7 @@
 			
 <div class="registro" >
 	<div class="col" >    
-		<form  action="{{ url_for('subirimagen.imagen') }}" method="post" onsubmit="return Comprobar()">
+		<form  action="{{ url_for('subir') }}" enctype="multipart/form-data" method="post" onsubmit="return Comprobar()">
 			
 				<h1 style="font-size: 30px; ">TITULO</h1>
 				<br/>
@@ -43,13 +43,11 @@
 
 				<div class="form-file">
 					<div class="form-file__action">
-						<label for="image" class="title"></label>
+						<label for="file" class="title"></label>
 
-						<input type="file" name="imagen" id="imagen" >
+						<input type="file" name="file" id="imagen" >
 					</div>
-					<div class="form-file__result" id="result-image">
-						<img id="img-result" alt="" />
-					</div>
+					
 				</div>
 				
 				

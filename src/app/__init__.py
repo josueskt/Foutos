@@ -14,5 +14,6 @@ def c_app():
     app.register_blueprint(inicio)
     app.register_blueprint(fotos)
     app.register_blueprint(subirimagenes)
+
     
     return app
