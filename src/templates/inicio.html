@@ -85,7 +85,18 @@
            
            {%for id_foto in Fot %}
             <div class="cont_img">
+                <div class="imagenes">
                 <img src="./static/img/todos/{{ id_foto.imagen }}" alt="">
+                </div>
+                <div class="imagenes_dos">
+                    <h1>
+                       {{id_foto.titulo}}
+                    </h1>
+                    <h4>
+                        {{id_foto.descripcion}}
+                     </h4>
+
+                </div>
             </div>
             
             {% endfor %}                                                
