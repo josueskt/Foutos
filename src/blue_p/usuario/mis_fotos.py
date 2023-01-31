@@ -4,9 +4,9 @@ from database.db import get_Conection
 conn = get_Conection()
 
 
-perfil=Blueprint('profile',__name__,url_prefix='/')
-@perfil.route('/profile')
-def profile(): 
+misfotos=Blueprint('misfotos',__name__,url_prefix='/')
+@misfotos.route('/misfotos')
+def mios(): 
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     
     # Check if user is loggedin
@@ -16,11 +16,9 @@ def profile():
         cursor.execute('SELECT imagen FROM foto WHERE id_user = %s ',[session['id']] )
         foto = cursor.fetchall()
         # Show the profile page with account info
-        return render_template('profile.html', account=account  , foto=foto)
+        return render_template('mis_fotos.html', account=account  , foto=foto)
     # User is not loggedin redirect to login page
-    return redirect(url_for('login'))
-
-
+   
 
 
 

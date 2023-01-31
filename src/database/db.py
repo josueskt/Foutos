@@ -8,7 +8,7 @@ def get_Conection():
     DB_HOST = "localhost"
     DB_NAME = "foutos"
     DB_USER = "postgres"
-    DB_PASS = "1234"
+    DB_PASS = "magodeoz100"
  
  
     conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)

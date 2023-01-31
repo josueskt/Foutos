@@ -1,3 +1,22 @@
+.subir_foto{
+  background-color: rgb(3, 3, 3);
+  width: 200px;
+  height: 200px;
+border: 5px dashed white ;
+text-align: center;
+color: white;
+display: inline-block;
+}
+.subir_foto p {
+ padding-top: 40%;
+}
+.cont_img{
+  display: inline-block;
+}
+.cont_img > img {
+	width: 200px;
+	height: 200px;
+}
 @media screen and (max-width: 768px) {
   .navbar-nav, .mr-auto ul{
     margin: 0;

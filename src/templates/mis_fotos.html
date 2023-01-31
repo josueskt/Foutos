@@ -1,0 +1,17 @@
+{% extends './menu.html' %}
+
+{% block menu_bar  %}
+<link rel="stylesheet" href="{{url_for('static',filename ='misfotos.css')}}">
+{{super()}}
+
+<br>
+<br>
+<div class = "container">
+{%for id_foto in foto %}
+    <div class="cont_img">
+        <img src="./static/img/todos/{{ id_foto.imagen }}" alt="">
+    </div>
+
+{% endfor %}   
+</div>
+{% endblock  %}

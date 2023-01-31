@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head >
-		<title>Vista para subir fotos </title>
+		{% block title %}FOUTOS ART{% endblock %}
 		<link rel="stylesheet" href="{{url_for('static',filename ='stilo.css')}}">
 
 	
@@ -19,7 +19,7 @@
 			
 <div class="registro" >
 	<div class="col" >    
-		<form  action="{{ url_for('subir') }}" enctype="multipart/form-data" method="post" onsubmit="return Comprobar()">
+		<form  action="/subirimagen" enctype="multipart/form-data" method="post" >
 			
 				<h1 style="font-size: 30px; ">TITULO</h1>
 				<br/>
@@ -64,7 +64,7 @@
 	</div>
 
 			<script  src="{url_for('static',filename ='script/vali_campos.js')}}"></script>
-			<script  src="{url_for('static',filename ='script/subir.js')}}"></script>
+
 
 			{% endblock  %}
 	</div>

@@ -6,15 +6,18 @@ import os
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 from database.db import get_Conection
-conn = get_Conection()
+
 from app import c_app
 
+#llamado de extencion
+conn = get_Conection()
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
-
-#entidades 
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 app = c_app()
-UPLOAD_FOLDER = 'C:\\Users\\Alexis\\OneDrive\\Escritorio\\AE\Pro2\\src\\app\\static\\img\\todos'
+UPLOAD_FOLDER = 'C:\\Users\\ASUS\\Documents\\Foutus\\src\\app\\static\\img\\todos'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/login/', methods=['GET', 'POST'])
@@ -61,13 +64,14 @@ def register():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
  
     # Check if "username", "password" and "email" POST requests exist (user submitted form)
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form :
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'imagen' in request.files :
         # Create variables for easy access
         fullname = request.form['fullname']
         username = request.form['username']
         password = request.form['password']
-        
-    
+        descripcion = request.form['descripcion']
+        file = request.files['imagen']
+
         _hashed_password = generate_password_hash(password)
  
         #Check if account exists using MySQL
@@ -77,23 +81,26 @@ def register():
         # If account exists show error and validation checks
         if account:
             flash('la cuenta ya existe!')
-        elif not re.match(r'[^@]+@[^@]+\.[^@]+', username):
+        elif not re.match(r'[^@]+@[^@]+.[^@]+', username):
             flash('e-mail invalido')
-      
-        elif not username or not password or not fullname :
+
+        elif not username or not password or not fullname  or not file:
             flash('por favor  llene todos los campos ')
         else:
+            
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            
             # Account doesnt exists and the form data is valid, now insert new account into users table
-            cursor.execute("INSERT INTO users (fullname, username, comtrasea) VALUES (%s,%s,%s)", (fullname, username, _hashed_password))
+            cursor.execute("INSERT INTO users (fullname, username, imagen, descripcion, comtrasea) VALUES (%s,%s,%s,%s,%s)", (fullname, username, filename, descripcion, _hashed_password))
             conn.commit()
             return redirect(url_for('login'))
-            flash('You have successfully registered!')
+           
     elif request.method == 'POST':
         # Form is empty... (no POST data)
         flash('Please fill out the form!')
     # Show registration form with message (if any)
     return render_template('register.html')
-   
    
 @app.route('/logout')
 def logout():
@@ -104,30 +111,16 @@ def logout():
    # Redirect to login page
    return redirect(url_for('login'))
   
-@app.route('/profile')
-def profile(): 
-    cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    
-    # Check if user is loggedin
-    if 'loggedin' in session:
-        cursor.execute('SELECT * FROM users WHERE id_user = %s', [session['id']])
-        account = cursor.fetchone()
-        # Show the profile page with account info
-        return render_template('profile.html', account=account)
-    # User is not loggedin redirect to login page
-    return redirect(url_for('login'))
+
 
 #registra un error y lo manda al html 
 #subir foto
-conn=get_Conection()
 
 
-ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route('/subirimagen', methods=['GET'])
+
+@app.route('/subirimagen', methods=['GET','POST'])
 def imagen():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     
@@ -136,33 +129,31 @@ def imagen():
         cursor.execute('SELECT * FROM users WHERE id_user = %s', [session['id']])
         account = cursor.fetchone()
         
-    
-    
-    
-
-        
-    return render_template('subir_imagen.html', account =account )
-
-@app.route('/subirimagen', methods=['POST'])
-def subir(): 
-        cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    
+      
+    if request.method == 'POST': 
         titulo = request.form['titulo']
         descripcion= request.form['descripcion']
         file = request.files['file']
-        
+        id =  session['id']
         if file.filename == '':
             flash('No image selected for uploading')
-            return redirect(request.url)
+            
         
-        if file and allowed_file(file.filename):
+        else :
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-               
-            cursor.execute('INSERT INTO foto (titulo,descripcion,id_user,imagen) VALUES(%s,%s,%s,%s)',(titulo,descripcion,session['id'],filename,))
+           
+            cursor.execute('INSERT INTO foto (titulo, descripcion, imagen, id_user) VALUES (%s,%s,%s,%s)', (titulo,descripcion ,filename , id ))
+            conn.commit()
             print('enviado')
             return redirect(url_for('Inicio.profile')) 
-               
+      
+
+    
+    
+
+    return render_template('subir_imagen.html', account =account )
+
 
 
 
