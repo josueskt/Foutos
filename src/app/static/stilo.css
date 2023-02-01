@@ -1,0 +1,32 @@
+.registro{
+	padding-top: 15px;
+	background-color: rgb(74, 74, 74);
+	width: 900px;
+	margin: auto;
+	padding-left: 5px;
+	text-align: left;
+}
+.form-file{
+	height: 150px;
+border: 2px dashed  white ;
+	
+}
+.field{
+	height: 80px;
+	
+	width: 100%
+}
+.col_two{
+	text-align: right;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+.button{
+	height: 40px;
+	color: rgb(0, 0, 0);
+	background-color: rgb(20, 255, 20);
+}
+.button:hover{
+	background-color: rgb(6, 123, 2);
+}
+

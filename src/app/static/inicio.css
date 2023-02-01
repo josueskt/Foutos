@@ -1,0 +1,80 @@
+.carrusel_cont{
+   
+    position: relative;
+}
+
+.carusser_anterior , 
+.carusser_siguiente{
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 200px;
+    border: none;
+    border-radius:  7px;
+    line-height: 30px;
+    text-align: center;
+    background-color: none;
+    color: white;
+    background-color: rgba(5, 5, 5, 0.247);
+    -webkit-border-radius:  7px;
+    -moz-border-radius:  7px;
+    -ms-border-radius:  7px;
+    -o-border-radius:  7px;
+}
+.carusser_anterior{
+    left: -80px;
+    
+
+}
+.carusser_anterior img , .carusser_siguiente img{
+    width: 60px;
+    text-align: left;
+    display: block;
+    
+    
+    
+}
+.carusser_siguiente{
+    right:  -80px;
+}
+.ruleta{
+    
+   margin: 10%;
+}
+.carrusel_element{
+    padding: 2px;
+   
+}
+.carrusel_element img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+   
+}
+.explore_text{
+    color: white;
+    text-align: center;
+ 
+   margin: 0;
+}
+.cont{
+    
+    
+    display: grid;
+    grid-template-columns: repeat( 6, auto);
+}
+.cont_img img{
+    width: 200px;
+    padding-bottom: 15px;
+    border-radius: 3px;
+   
+}
+footer{
+    height: 200px;
+    color: white ; 
+   background-image: url(../img/foot.png);
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+}
