@@ -85,18 +85,27 @@
            
            {%for id_foto in Fot %}
             <div class="cont_img">
-                <div class="imagenes">
-                <img src="./static/img/todos/{{ id_foto.imagen }}" alt="">
-                </div>
-                <div class="imagenes_dos">
-                    <h1>
-                       {{id_foto.titulo}}
-                    </h1>
-                    <h4>
-                        {{id_foto.descripcion}}
-                     </h4>
+                
 
+                <img src="./static/img/todos/{{ id_foto.imagen }}" alt="" id="pen" onclick="test('{{id_foto.imagen}}','{{ id_foto.titulo }}','{{ id_foto.descripcion }}')">
+                <div class="imagenes_dos">
+                    <div>
+                        <div>  
+                             <h1>
+                                {{id_foto.titulo}}
+                            </h1>
+                        </div>
+                    <hr>
+                    <br>
+                        <div>
+                            <p>
+                        
+                                {{id_foto.descripcion}}
+                            </p>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
             
             {% endfor %}                                                
@@ -105,13 +114,44 @@
     </div>
     <script  src="{url_for('static',filename ='inicion.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <footer>
+ <div class = "contt" >
+        <div class="datos_foto" id= "datos">
+
+        </div>
+    <div class ="datos_cont">
+        <br>
+        <br>
+        <h1>
+            TITULO
+        </h1>
+        <div class="datos_titul" id= "datos_titulo">
+           
+        </div>
+        <br>
+        <br>
+        <h1>
+            DESCRIPCION
+        </h1>
+        <div class="datos_titul" id= "datos_descripcion">
+        </div>
+    </div>
+    <div >
+        <button type="" id="pen" class="central_buton"> X</button>
+    </div>
+</div>
+        </footer>
+<script>
+const $openc = document.getElementById("pen"),
+$usercl = document.getElementById("contt")
+$openc.addEventListener("click",()=>{
+$usercl.classList.toggle("close_tre")
+})
+</script>
    {% endblock  %}
 </body>
 <br>
 <br>
 <br>
-<footer>
-
-</footer>
 
 </html>

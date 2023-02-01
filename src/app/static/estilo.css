@@ -1,3 +1,6 @@
+*{
+  color: white;
+}
 .subir_foto{
   background-color: rgb(3, 3, 3);
   width: 200px;
@@ -132,7 +135,7 @@ display: inline-block;
     height:40px;
     margin-top:10px;
     font-family:Impact;
-    color: #000000bb;
+    color: #ffffffbb;
     border-color: rgb(0, 0, 0) !important;
     border-bottom: solid;
     border-radius:50px;

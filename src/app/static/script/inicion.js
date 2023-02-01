@@ -25,4 +25,21 @@ $openclos.addEventListener("click",()=>{
 })
 
 
+function test(imagen , titulo ,descripcion) {
+  
+  const  node = document.getElementById("datos")
+  node.innerHTML = ''
+  let def =  "<img src='./static/img/todos/"+imagen+"' width =  '400px' alt=''>"
+  let tit = "<h1>"+titulo+"</h1>"
+  let desc = "<p>"+descripcion+"</p>"
+  //let textnode = document.createElement(def)
+  document.getElementById("datos_titulo").innerHTML = tit
+  document.getElementById("datos").innerHTML = def
+  document.getElementById("datos_descripcion").innerHTML = desc
+  //llamada a la base de datos pasandole el id
+  // 
+ 
+}
+
+
 
