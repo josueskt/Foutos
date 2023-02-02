@@ -31,21 +31,18 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          
             
               
               <h1 class="pedo">AJUSTES</h1>
               <br>
-              <div class="v-line1"></div>
-              <div class="v-line"></div>
               <ul class="navbar-nav mr-auto">
                 <hr class="hr1">
                 <li class="nav-item">
-                    <a class="nav-link" style="margin-top:-17px;height: 117px;font-size:50px;color:rgb(247, 247, 247);" href="./profile.html">Perfíl</a>
+                    <a class="nav-link" style="margin-top:-17px;height: 117px;font-size:50px;color:rgb(247, 247, 247);" href="{{ url_for('profile.profile') }}">Perfíl</a>
                 </li>
                 <hr class="hr2">
               </ul>
-          </nav>
         </div>
       
 
@@ -68,7 +65,7 @@
             
         </div>
 
-        <div class="col" style= "height: 450px;border-style: groove;margin: 20px;background-color:#000000bb;">
+        <div class="col" style= "height: 350px;border-style: groove;margin: 20px;background-color:#000000bb;">
 
           <form name="myForm" action="" method="post" onsubmit="return Comprobar()">
             <br>
@@ -76,27 +73,6 @@
                        <br>
              <h2  class="CampoForm">Correo</h2><input type="email" placeholder="Email" id="email" name="email"> <br> 
                          <br>
-            <h2  class="CampoForm">País</h2>
-            <br>
-            <select name="pais" id="pais">
-              <option  value="1">Seleccione:</option>
-              <option value="2">España</option>
-              <option value="3">México</option>
-              <option value="4">Guatemala</option>
-              <option value="5">Honduras</option>
-              <option value="7">El Salvador</option>
-              <option value="8">Venezuela</option>
-              <option value="9">Colombia</option>
-              <option value="10">Cuba</option>
-              <option value="11">Bolivia</option>
-              <option value="13">Perú</option>
-              <option value="14">Ecuador</option>
-              <option value="15">Paraguay</option>
-              <option value="16">Uruguay</option>
-              <option value="17">Chile</option>
-              <option value="18">Argentina</option>
-            </select>
-          <br>
             <input class="btn btn-outline-primary save" type="submit" class="button" name="enviar" value="Guardar">
           </form>
             </div>

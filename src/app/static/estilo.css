@@ -246,7 +246,7 @@ display: inline-block;
     width: 400px;
     height: 40px;
     background-position: 20px;
-    color: darkred;
+    color: rgb(92, 76, 26);
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     font-size: 30px;
     margin-top: 20px;
@@ -313,8 +313,8 @@ display: inline-block;
 		position: absolute;
 		width:  250px;
 		height: 250px;
-		left: 615px;
-    top: 100px;
+		left: auto;
+    top: auto;
     background: linear-gradient(
       25deg,
       rgb(215, 219, 217),
@@ -351,20 +351,6 @@ display: inline-block;
 	.form-file__result--active {
 		background-color: rgba(82, 81, 79, 0.314);
 	}
-  .v-line{
-    border-left: thick solid white;
-    height:56%;
-    left: 99%;
-    position: absolute;
-    top: 44%;
-   }
-   .v-line1{
-    border-left: thick solid white;
-    height:53%;
-    left: -100%;
-    position: absolute;
-    top: 46%;
-   }
   .hr1{
     border: 0;
     border-top: 5px solid #ffffff; 
@@ -376,6 +362,7 @@ display: inline-block;
     border-top: 5px solid #ffffff; 
     border-bottom: 2px solid #333;
     height:0;
+    margin-top: 0px;
     
   }
   .save{
