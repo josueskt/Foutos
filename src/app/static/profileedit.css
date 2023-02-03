@@ -1,0 +1,425 @@
+button {
+    color: white;
+}
+body{
+    overflow: hidden;
+}
+.title {
+    color: black;
+    height: 10px;
+}
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputfile + label {
+    position: relative;
+    bottom: 80px;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    height: 30px;
+    background-color: #093faa ;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color:  #5678EF;
+}
+.backGround {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.photoIcon img {
+    position: absolute;
+
+}
+
+.Icon img {
+    border-radius: 50%;
+}
+
+.Icon {
+    position: absolute;
+
+    opacity: 0.2;
+
+
+}
+
+.Icon:hover {
+    opacity: 0.7;
+}
+
+.userPhoto {
+    height: 220px;
+    position: relative;
+}
+
+.photoIconPrimary {
+    position: relative;
+    left: 30px;
+}
+
+
+@media (min-width: 900px) {
+
+    .toEdit button:hover {
+        background-color: #002a61;
+    }
+
+    .profileTwo {
+        background-color: aliceblue;
+        visibility: hidden;
+
+        position: absolute;
+        z-index: 2;
+        left: -150px;
+        top: -206px;
+        height: 260px;
+        width: 600px;
+        border: 2px solid transparent;
+        border-color: black;
+        border-radius: 25px;
+        display: block;
+    }
+
+    td {
+
+       
+        padding-left: 5px;
+        padding-top: -5px;
+       
+
+    }
+
+    .changeImage {
+        display: inline-block;
+    }
+
+
+    .displasment {
+        visibility: visible;
+    }
+
+    .displasmen {
+        visibility: visible;
+    }
+
+
+    .profileUser {
+       
+      
+        position: relative;
+        top: 30px;
+        left: 40%;
+        border-radius: 50%;
+        border: none;
+    }
+
+    .userImage {
+        display: inline-flex
+    }
+
+    .userImage img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        box-shadow: 2px 3px rgba(0, 0, 0, 0.299);
+    }
+
+    .userData {
+        position: absolute;
+        z-index: 0;
+        display: inline-block;
+    }
+
+    .aju {
+        position: absolute;
+        top: -60px;
+        left: auto;
+    }
+
+    .ajustes h1 {
+        text-align: center;
+        color: black;
+    }
+
+    .toEditOne {
+        position: absolute;
+        top: 270px;
+        left: 100px;
+    }
+
+    .toEditOne button {
+
+        width: 100px;
+        height: 40px;
+        background-color: #093faa;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .toEdit button {
+
+        width: 100px;
+        height: 40px;
+        background-color: #093faa;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .toEditTree {
+        display: inline-block;
+    }
+
+    .toEditTree button {
+
+
+        width: 100px;
+        height: 40px;
+        background-color: #093faa;
+        border-radius: 10px;
+        border: none;
+        display: inline-block;
+    }
+
+    #cancel {
+        background-color: #6f6f6f;
+    }
+
+    .buttonsView {
+        position: relative;
+        left: 60%;
+        bottom: 10px;
+    }
+
+    .texting {
+        color: black;
+    }
+
+    #imagePreview {
+        height: 200px;
+        width: 200px;
+        border-radius: 120px;
+        padding: 5px;
+
+    }
+
+    #imageview {
+        height: 203px;
+        width: 203px;
+        border-radius: 50%;
+
+    }
+
+
+    .borderTableTitle p {
+        position: relative;
+        
+        border: 2px solid transparent;
+        width: 110%;
+        border-radius: 10px;
+        color: black;
+        border-color: black;
+        background-color: #D0D3D4;
+
+
+    }
+
+
+    .texting {
+        border: 2px solid transparent;
+        width: 110%;
+        border-radius: 10px;
+        color: black;
+        border-color: black;
+
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 900px) {
+    .toEdit button:hover {
+        background-color: #002a61;
+    }
+
+    .profileTwo {
+        background-color: aliceblue;
+        visibility: hidden;
+
+        position: absolute;
+        z-index: 2;
+        top: -205px;
+        height: 250px;
+        width: 400px;
+        border: 2px solid transparent;
+        border-color: black;
+        border-radius: 25px;
+        display: block;
+    }
+
+    .changeImage {
+        display: inline-block;
+    }
+
+
+    .displasment {
+        visibility: visible;
+    }
+
+    .profileUser {
+
+        display: block;
+        position: relative;
+        top: 40px;
+        left: auto;
+        border-radius: 50%;
+
+    }
+
+
+    .userImage img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        box-shadow: 2px 3px rgba(0, 0, 0, 0.299);
+    }
+
+    .userData {
+
+        display: inline-block;
+    }
+
+    .aju h1 {
+        text-align: center;
+        color: black;
+    }
+
+    .toEdit {
+        position: relative;
+        top: 150px;
+        left: 30%;
+    }
+
+    .toEditOne {
+        position: absolute;
+        top: 250px;
+        left: 35%;
+    }
+
+    .toEditOne button {
+
+        width: 100px;
+        height: 40px;
+        background-color: #093faa;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .toEdit button {
+
+        width: 100px;
+        height: 40px;
+        background-color: #093faa;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .toEditTree {
+        display: block;
+    }
+
+    .toEditTree button {
+
+
+        width: 100px;
+        height: 40px;
+        background-color: #093faa;
+        border-radius: 10px;
+        border: none;
+        display: inline-block;
+    }
+
+    #cancel {
+        background-color: red;
+    }
+
+    .buttonsView {
+        position: relative;
+        left: 50%;
+        bottom: 70px;
+    }
+
+    .texting {
+        color: black;
+    }
+
+    #imagePreview {
+        height: 200px;
+        width: 200px;
+        border-radius: 120px;
+    }
+
+    #imageview {
+        height: 200px;
+        width: 200px;
+        border-radius: 120px;
+    }
+
+    .borderTable p {
+        border: 2px solid transparent;
+        border-radius: 11px;
+        color: black;
+        border-color: black;
+        width: 110%;
+        padding-left: 5px;
+
+    }
+
+    .borderTableTitle p {
+        position: relative;
+       
+        border: 2px solid transparent;
+        width: 110%;
+        border-radius: 11px;
+        color: black;
+        border-color: black;
+        background-color: #D0D3D4;
+
+
+    }
+
+    td {
+
+        padding-left: 5px;
+        padding-top: -5px;
+
+    }
+
+    .texting {
+        border: 2px solid transparent;
+        width: 110%;
+        border-radius: 15px;
+        color: black;
+        border-color: black;
+
+        padding-left: 5px;
+
+    }
+
+
+
+}

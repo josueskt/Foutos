@@ -5,9 +5,6 @@ import psycopg2
 from random import *
 inicio=Blueprint('Inicio',__name__,url_prefix='/')
 conn=get_Conection()
-@inicio.route('/')
-def  home(): 
-    return redirect('login')
 @inicio.route('/inicio')
 def profile():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
@@ -16,13 +13,13 @@ def profile():
     if 'loggedin' in session:
         cursor.execute('SELECT * FROM users WHERE id_user = %s', [session['id']])
         account = cursor.fetchone()
-        cursor.execute('SELECT * FROM foto ORDER BY random() ')
+        cursor.execute('SELECT id_foto , imagen FROM foto')
         Fot= cursor.fetchall()
-       
         
-     #asdasdd
+     
 
-        
+    
+       
         
         
     return render_template('inicio.html', account =account , Fot = Fot)
