@@ -20,7 +20,7 @@ def profile():
         Fot= cursor.fetchall()
        
         
-     
+     #asdasdd
 
         
         
