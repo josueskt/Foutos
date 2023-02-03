@@ -22,7 +22,7 @@
 </header>
 
 <body>
-    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
     <div class="explore_text">
         <hr>
         <h1>Canales</h1>
@@ -112,42 +112,45 @@
           
         </div>
     </div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
     <script  src="{url_for('static',filename ='inicion.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <footer>
- <div class = "contt" >
-        <div class="datos_foto" id= "datos">
-
-        </div>
-    <div class ="datos_cont">
-        <br>
-        <br>
-        <h1>
-            TITULO
-        </h1>
-        <div class="datos_titul" id= "datos_titulo">
-           
-        </div>
-        <br>
-        <br>
-        <h1>
-            DESCRIPCION
-        </h1>
-        <div class="datos_titul" id= "datos_descripcion">
-        </div>
-    </div>
-    <div >
-        <button type="" id="pen" class="central_buton"> X</button>
-    </div>
-</div>
-        </footer>
-<script>
-const $openc = document.getElementById("pen"),
-$usercl = document.getElementById("contt")
-$openc.addEventListener("click",()=>{
-$usercl.classList.toggle("close_tre")
-})
-</script>
+   
    {% endblock  %}
 </body>
 <br>
