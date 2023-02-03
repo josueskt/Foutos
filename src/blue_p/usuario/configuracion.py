@@ -34,20 +34,33 @@ def configuracion():
    
     
 def actualizar_usuario (): 
-    fullname = request.form['fullname']
+ fullname = request.form['fullname']
     
-    description = request.form['descripcion']
-    file = request.files['photo']
-    filename = secure_filename(file.filename)
-    file.save(os.path.join(UPLOAD_FOLDER, filename))
+ description = request.form['descripcion']
+ file = request.files['photo']
+ filename = secure_filename(file.filename)  
+ if description == '' and fullname == '' : 
+     flash("Campos vacios ")
+  
+ elif file.filename == '':
+     
+     
+    
+   # file.save(os.path.join(UPLOAD_FOLDER, filename))
+    
+    
     
     
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    cursor.execute('UPDATE users SET fullname = %s , imagen %s ,  descripcion = %s where id_user = %s', (fullname,filename,description,session['id']))
+    cursor.execute('UPDATE users SET fullname = %s ,  descripcion = %s where id_user = %s', (fullname,description,session['id']))
     conn.commit()
     return redirect(url_for('Inicio.profile'))
         
-        
+ elif file.filename != '':   
+    cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    cursor.execute('UPDATE users SET fullname = %s ,imagen = %s,  descripcion = %s where id_user = %s', (fullname,filename,description,session['id']))
+    conn.commit()
+    return redirect(url_for('Inicio.profile'))    
     
     
 

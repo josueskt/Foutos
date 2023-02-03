@@ -18,8 +18,8 @@
     </div>
   </button>
 </div>
-<!-- JavaScript Bundle with Popper 
-<form action="{{ url_for('congif.configuracion') }}" method="POST">
+
+<form action="{{ url_for('congif.configuracion') }}" enctype="multipart/form-data" method="POST">
   <div class="profileUser">
     <div class="profileTwo " id="profileTwo">
       <div class="changeImage">
@@ -34,18 +34,24 @@
           <button id="editar" type="submit">Guardar</button>
         </div>
         
-</form>
+
 <div class="toEditTree">
   <button id="cancel" type="button">Cancelar</button>
 </div>
 </div>
 </div>
--->
-<form action="/configuracion" enctype="multipart/form-data" method="POST">
-  <div class="changeImage">
-    <input type="file" name="photo" id="filePicker" class="inputfile" accept="image/*">
-    <label for="filePicker">Subir imagen</label>
-  </div>
+
+
+
+
+
+  
+
+
+
+
+
+  
   <table class="userData">
     
     <tr>
