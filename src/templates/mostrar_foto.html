@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename ='mostrar_foto.css')}}">
+</head>
+<header>
+    {% extends './menu.html' %}
+    {% block menu_bar  %}
+    
+    {{super()}}
+</header>
+
+<body>
+    <div class="cont">
+        <div>
+
+        </div>
+        <div class="imagen">
+            <div class="text">
+                <h1>titulo</h1>
+
+            </div>
+            <img src="https://th.bing.com/th/id/OIP.TEa9jg4CrXI7zxsSZt-bKAHaFj?pid=ImgDet&rs=1" alt="">
+            <p></p>
+
+        </div>
+        <div class="texto">
+            <div class="usuario">
+                <div class="fotouser">
+                    <img src="https://th.bing.com/th/id/OIP.TEa9jg4CrXI7zxsSZt-bKAHaFj?pid=ImgDet&rs=1" alt="">
+
+                </div>
+                <div class="nameuser">
+                    <a href="">qsadsddsdad</a>
+                </div>
+            </div>
+            <div class="ingresacomentario">
+                <form action="" method="post">
+                    <input type="text" name="comentario" id="comentario" placeholder="ingresacometario">
+                    <button type="submit">comentar</button>
+                </form>
+            </div>
+            <div class="comentarios">
+                <div class="comentario">
+                    <p>asdasdsda</p>
+
+
+                </div>
+                <div class="comentario">
+                    <p>asdasdsda</p>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% endblock  %}
+</body>
+
+</html>

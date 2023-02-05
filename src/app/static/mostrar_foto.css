@@ -1,0 +1,59 @@
+.cont{
+    display: grid;
+    grid-template-columns:70px 800px 1fr;
+  }
+  .imagen{
+    background-color: rgb(67, 67, 67);
+    height: 100%; 
+    border-right: 3px rgb(255, 255, 255) solid;
+    
+  }
+  .imagen img{
+    padding-left: 100px;
+    padding-top: 10px;
+    width: 600px;
+  }
+  .texto{
+    background-color: rgb(67, 67, 67);
+    
+  }
+  .usuario{
+    border-bottom:  3px white solid;
+  }
+  .fotouser img {
+    
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    
+  }
+  .fotouser{
+    display: inline-block;
+  }
+  .nameuser{
+    display: inline-block;
+    text-align: center;
+    
+  }
+  .ingresacomentario{
+    border-bottom: 3px white solid;
+  }
+  #comentario{
+    width: 95%;
+    height: 200px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    
+  }
+  .comentarios{
+    Overflow-Y: Scroll;
+    height: 300px;
+    
+  }
+  .comentario{
+    border-bottom: 3px white solid;
+  }

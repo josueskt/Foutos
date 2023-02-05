@@ -9,7 +9,8 @@ from random import *
 
 
 
-UPLOAD_FOLDER = 'C:\\Users\\K1\\Documents\\foutos\\src\\app\\static\\img\\todos'
+UPLOAD_FOLDER = 'C:\\Users\\ASUS\\Documents\\Foutus\\src\\app\\static\\img\\todos'
+
 
 
 

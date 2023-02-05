@@ -17,7 +17,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 app = c_app()
-UPLOAD_FOLDER = 'C:\\Users\\K1\\Documents\\foutos\\src\\app\\static\\img\\todos'
+UPLOAD_FOLDER = 'C:\\Users\\ASUS\\Documents\\Foutus\\src\\app\\static\\img\\todos'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/login/', methods=['GET', 'POST'])
