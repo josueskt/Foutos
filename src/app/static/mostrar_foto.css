@@ -1,3 +1,9 @@
+h1 {
+  color: white;
+}
+p{
+  color: white;;
+}
 .cont{
     display: grid;
     grid-template-columns:70px 800px 1fr;

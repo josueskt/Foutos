@@ -5,62 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{url_for('static',filename ='mostrar_foto.css')}}">
+    <title>FOUTOS</title>
+    
 </head>
 <header>
     {% extends './menu.html' %}
-    {% block menu_bar  %}
-    
+    {% block menu_bar %}
+    <link rel="stylesheet" href="{{url_for('static',filename ='mostrar_foto.css')}}">
     {{super()}}
 </header>
 
 <body>
+    <br><br>
+    
     <div class="cont">
         <div>
 
         </div>
         <div class="imagen">
             <div class="text">
-                <h1>titulo</h1>
+                
+                <h1>{{foto.titulo}}</h1>
 
             </div>
-            <img src="https://th.bing.com/th/id/OIP.TEa9jg4CrXI7zxsSZt-bKAHaFj?pid=ImgDet&rs=1" alt="">
-            <p></p>
+            <img src="../static/img/todos/{{foto.imagen}}"  alt="" >
+            <h1>Descripcion</h1>
+            <p>{{foto.descripcion}}</p>
 
         </div>
         <div class="texto">
             <div class="usuario">
                 <div class="fotouser">
-                    <img src="https://th.bing.com/th/id/OIP.TEa9jg4CrXI7zxsSZt-bKAHaFj?pid=ImgDet&rs=1" alt="">
+            <div class="userimg"> <img src="../static/img/todos/{{user_foto.imagen}}"  alt=""  height="40px" width= "40px" id="close-open"></div>
+                  
 
                 </div>
                 <div class="nameuser">
-                    <a href="">qsadsddsdad</a>
+                    <a href="">{{user_foto.fullname}}</a>
                 </div>
             </div>
             <div class="ingresacomentario">
-                <form action="" method="post">
+                <form action="/foto/{{foto.id_foto}}" method="post">
                     <input type="text" name="comentario" id="comentario" placeholder="ingresacometario">
                     <button type="submit">comentar</button>
                 </form>
             </div>
             <div class="comentarios">
+                {%for id_comentario in comentarios %}
                 <div class="comentario">
-                    <p>asdasdsda</p>
+                    <p>{{id_comentario.texto}}</p>
 
 
                 </div>
-                <div class="comentario">
-                    <p>asdasdsda</p>
-
-
-                </div>
+             {% endfor %}                                                
 
             </div>
         </div>
     </div>
-    {% endblock  %}
+      {% endblock  %}
 </body>
 
 </html>

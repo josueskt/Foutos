@@ -1,79 +1,82 @@
+{% extends './menu.html' %}
+{% block menu_bar  %}
+
+{{super()}}
+
 <link rel="stylesheet" href="/css/profileEdit.css">
 <link rel="stylesheet" href="{{url_for('static',filename ='profileedit.css')}}">
-<div class="backGround" id="backGround"> 
+<div class="backGround" id="backGround">
 </div>
-<center>
-  <h1 class="title">Editar perfil</h1>
-</center>
+
 
 <div class="userPhoto">
-  <button type="" class="profileUser" id="lose-open">
-    <div class="photoIconPrimary">
-      <div class="photoIcon">
-        <img src="./static/img/todos/{{ account.imagen }}" id="imageview" alt="default img">
-      </div>
-      <div class="photoIcon Icon">
-        <img src="/img/user/Icon.png" alt="" height="200px" width="200px">
-      </div>
-    </div>
-  </button>
+    <button type="" class="profileUser" id="lose-open">
+        <div class="photoIconPrimary">
+            <div class="photoIcon">
+                <img src="./static/img/todos/{{ account.imagen }}" id="imageview" alt="default img">
+            </div>
+            <div class="photoIcon Icon">
+                <img src="{{url_for('static',filename ='img/Icon.png')}}" alt="" height="200px" width="200px">
+            </div>
+        </div>
+    </button>
 </div>
 
 <form action="{{ url_for('congif.configuracion') }}" enctype="multipart/form-data" method="POST">
-  <div class="profileUser">
-    <div class="profileTwo " id="profileTwo">
-      <div class="changeImage">
-        <img src="./static/img/todos/{{ account.imagen }}" id="imagePreview" alt="default img">
-        <div class="changeImage">
-          <input type="file" name="photo" id="filePicker" class="inputfile" accept="image/*">
-          <label for="filePicker">Subir imagen</label>
+    <div class="profileUser">
+        <div class="profileTwo " id="profileTwo">
+            <div class="changeImage">
+                <img src="./static/img/todos/{{ account.imagen }}" id="imagePreview" alt="default img">
+                <div class="changeImage">
+                    <input type="file" name="photo" id="filePicker" class="inputfile" accept="image/*">
+                    <label for="filePicker">Subir imagen</label>
+                </div>
+            </div>
+            <div class="buttonsView">
+                <div class="toEditTree">
+                    <button id="editar" type="submit">Guardar</button>
+                </div>
+
+
+                <div class="toEditTree">
+                    <button id="cancel" type="button">Cancelar</button>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="buttonsView">
-        <div class="toEditTree">
-          <button id="editar" type="submit">Guardar</button>
-        </div>
-        
-
-<div class="toEditTree">
-  <button id="cancel" type="button">Cancelar</button>
-</div>
-</div>
-</div>
+        {% endblock %}
 
 
 
 
 
-  
 
 
 
 
 
-  
-  <table class="userData">
-    
-    <tr>
-      <td class="borderTableTitle">
-        <p>fullname</p>
-      </td>
-     
-      <td><input type="text" name="fullname" class="texting" value="{{ account.fullname}}"></td>
-    </tr>
-    
-    <tr>
-      <td class="borderTableTitle">
-        <p>Descripcion</p>
-      </td>
-      <td><input type="text" name="descripcion" class="texting" value="{{ account.descripcion }}"></td>
-    </tr>
-    <div class="toEditOne">
 
-      
-      <center>
-        <button id="editar" type="submit">Guardar</button>
-    </div>
+        <table class="userData">
+
+            <tr>
+                <td class="borderTableTitle">
+                    <p>fullname</p>
+                </td>
+
+                <td><input type="text" name="fullname" class="texting" value="{{ account.fullname}}"></td>
+            </tr>
+
+            <tr>
+                <td class="borderTableTitle">
+                    <p>Descripcion</p>
+                </td>
+                <td><input type="text" name="descripcion" class="texting" value="{{ account.descripcion }}"></td>
+            </tr>
+            <div class="toEditOne">
+
+
+                <center>
+                    <button id="editar" type="submit">Guardar</button>
+            </div>
 </form>
 
 </table>

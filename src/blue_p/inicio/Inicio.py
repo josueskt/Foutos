@@ -5,6 +5,17 @@ import psycopg2
 from random import *
 inicio=Blueprint('Inicio',__name__,url_prefix='/')
 conn=get_Conection()
+
+@inicio.route('/')
+def ind():
+    if 'login' in session: 
+        return redirect(url_for('profile'))
+    else: 
+        return redirect(url_for('login'))   
+        
+
+
+
 @inicio.route('/inicio')
 def profile():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
