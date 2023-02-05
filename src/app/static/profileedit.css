@@ -86,8 +86,8 @@ body{
 
         position: absolute;
         z-index: 2;
-        left: 5px;
-        
+        right: 100px;
+        top: -206px;
         height: 260px;
         width: 600px;
         border: 2px solid transparent;
@@ -124,7 +124,7 @@ body{
       
         position: relative;
         top: 30px;
-        
+        right: 15%;
         border-radius: 50%;
         border: none;
     }
@@ -148,7 +148,7 @@ body{
 
     .aju {
         position: absolute;
-        top: -20px;
+        top: -60px;
         left: auto;
     }
 
@@ -159,8 +159,8 @@ body{
 
     .toEditOne {
         position: absolute;
-        top: 270px;
-        left: 1px;
+        top: 100px;
+        right: 30%;
     }
 
     .toEditOne button {
@@ -202,7 +202,7 @@ body{
 
     .buttonsView {
         position: relative;
-        left: 10%;
+        left: 30%;
         bottom: 10px;
     }
 
@@ -251,3 +251,175 @@ body{
     }
 }
 
+@media (max-width: 900px) {
+    .toEdit button:hover {
+        background-color: #002a61;
+    }
+
+    .profileTwo {
+        background-color: aliceblue;
+        visibility: hidden;
+
+        position: absolute;
+        z-index: 2;
+        top: -205px;
+        height: 250px;
+        width: 400px;
+        border: 2px solid transparent;
+        border-color: black;
+        border-radius: 25px;
+        display: block;
+    }
+
+    .changeImage {
+        display: inline-block;
+    }
+
+
+    .displasment {
+        visibility: visible;
+    }
+
+    .profileUser {
+
+        display: block;
+        position: relative;
+        top: 40px;
+        left: auto;
+        border-radius: 50%;
+
+    }
+
+
+    .userImage img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        box-shadow: 2px 3px rgba(0, 0, 0, 0.299);
+    }
+
+    .userData {
+
+        display: inline-block;
+    }
+
+    .aju h1 {
+        text-align: center;
+        color: black;
+    }
+
+    .toEdit {
+        position: relative;
+        top: 150px;
+        left: 30%;
+    }
+
+    .toEditOne {
+        position: absolute;
+        top: 250px;
+        left: 35%;
+    }
+
+    .toEditOne button {
+
+        width: 100px;
+        height: 40px;
+        background-color: #093faa;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .toEdit button {
+
+        width: 100px;
+        height: 40px;
+        background-color: #093faa;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .toEditTree {
+        display: block;
+    }
+
+    .toEditTree button {
+
+
+        width: 100px;
+        height: 40px;
+        background-color: #093faa;
+        border-radius: 10px;
+        border: none;
+        display: inline-block;
+    }
+
+    #cancel {
+        background-color: red;
+    }
+
+    .buttonsView {
+        position: relative;
+        left: 50%;
+        bottom: 70px;
+    }
+
+    .texting {
+        color: black;
+    }
+
+    #imagePreview {
+        height: 200px;
+        width: 200px;
+        border-radius: 120px;
+    }
+
+    #imageview {
+        height: 200px;
+        width: 200px;
+        border-radius: 120px;
+    }
+
+    .borderTable p {
+        border: 2px solid transparent;
+        border-radius: 11px;
+        color: black;
+        border-color: black;
+        width: 110%;
+        padding-left: 5px;
+
+    }
+
+    .borderTableTitle p {
+        position: relative;
+       
+        border: 2px solid transparent;
+        width: 110%;
+        border-radius: 11px;
+        color: black;
+        border-color: black;
+        background-color: #D0D3D4;
+
+
+    }
+
+    td {
+
+        padding-left: 5px;
+        padding-top: -5px;
+
+    }
+
+    .texting {
+        border: 2px solid transparent;
+        width: 110%;
+        border-radius: 15px;
+        color: black;
+        border-color: black;
+
+        padding-left: 5px;
+
+    }
+
+
+
+}

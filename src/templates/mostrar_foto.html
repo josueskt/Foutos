@@ -26,12 +26,15 @@
             <div class="text">
                 
                 <h1>{{foto.titulo}}</h1>
-
+<br>
             </div>
             <img src="../static/img/todos/{{foto.imagen}}"  alt="" >
+            <br>
+            <br>
+            <div class="text">
             <h1>Descripcion</h1>
             <p>{{foto.descripcion}}</p>
-
+        </div>
         </div>
         <div class="texto">
             <div class="usuario">
@@ -47,10 +50,12 @@
             <div class="ingresacomentario">
                 <form action="/foto/{{foto.id_foto}}" method="post">
                     <input type="text" name="comentario" id="comentario" placeholder="ingresacometario">
-                    <button type="submit">comentar</button>
+                    <button type="submit" id= "coment">comentar</button>
+                    <h1>Comentarios</h1>
                 </form>
             </div>
             <div class="comentarios">
+                
                 {%for id_comentario in comentarios %}
                 <div class="comentario">
                     <p>{{id_comentario.texto}}</p>
