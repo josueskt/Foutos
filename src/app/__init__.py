@@ -7,6 +7,7 @@ from blue_p.fotos.subir_foto import fotos
 from blue_p.usuario.mis_fotos import misfotos
 from blue_p.usuario.configuracion import config
 from blue_p.fotos.mostrar import mostrar_fotos
+from blue_p.comunidad.categorias import categoria
 def c_app():
     app = Flask(__name__, template_folder='../Templates')
     app.secret_key = "super secret key"
@@ -16,6 +17,7 @@ def c_app():
     app.register_blueprint(misfotos)
     app.register_blueprint(config)
     app.register_blueprint(mostrar_fotos)
+    app.register_blueprint(categoria)
     
 
     
