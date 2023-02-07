@@ -1,0 +1,27 @@
+hr{
+    background-color: white;
+    color: white;
+}
+.cont{
+    
+    
+    display: grid;
+    grid-template-columns: repeat( 6, auto);
+}
+.cont_img img{
+   width: 200px;
+   padding-bottom: 15px;
+   border-radius: 3px;
+   position: relative;
+   display: block;
+   z-index: 0;
+  
+}
+.cont_img{
+    position: relative;
+    transition: 1s ;
+    -webkit-transition: 1s ;
+    -moz-transition: 1s ;
+    -ms-transition: 1s ;
+    -o-transition: 1s ;
+}

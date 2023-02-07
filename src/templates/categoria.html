@@ -1,7 +1,30 @@
 {% extends './menu.html' %}
     {% block menu_bar %}
     <link rel="stylesheet" href="{{url_for('static',filename ='mostrar_foto.css')}}">
+		<link rel="stylesheet" href="{{url_for('static',filename ='categoria.css')}}">
+
     {{super()}}
+    <br>
+    <hr>
+    <h1>{{cat.nombre}}</h1>
+    <hr>
+    <br>
+    <br>
+
+    <div class="all_img">
+        <div class="cont">
+           
+           {%for id_foto in Fot %}
+            <div class="cont_img">
+                
+
+                <a href="/foto/{{id_foto.id_foto}}"> <img src="../static/img/todos/{{ id_foto.imagen }}" alt="" id="pen"> </a>
+              
+            {% endfor %}                                                
+          
+        </div>
+    </div>
+
 
 
     

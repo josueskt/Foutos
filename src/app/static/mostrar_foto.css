@@ -63,12 +63,24 @@ p{
     background-color: rgb(255, 255, 255);
     
   }
+  .comentario textarea {
+    color: white;
+ background-color: rgb(62, 62, 62);
+ width: 100%;
+ 
+ resize: none;
+ border: none;
+ max-height: 500px;
+
+
+  }
   .comentarios{
     Overflow-Y: Scroll;
     height: 300px;
     
   }
   .comentario{
+    max-height: 500px;
     border-bottom: 2px rgb(111, 111, 111) solid;
   }
   #coment{

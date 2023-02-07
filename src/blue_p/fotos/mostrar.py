@@ -25,7 +25,7 @@ def mostrar(id):
         cursor.execute('SELECT * FROM comentario WHERE id_foto = %s ', (id,))
         comentarios= cursor.fetchall()
         
-        if request.method == 'POST' : 
+        if request.method == 'POST' and comentarios : 
             comentraio = request.form.get('comentario')
             if comentraio != None or comentraio != '' :
                 cursor.execute("INSERT INTO comentario (texto ,id_user,id_foto) VALUES (%s,%s,%s)", (comentraio,session['id'],id))

@@ -3,6 +3,7 @@ from flask import session, flash,request
 from  database.db import get_Conection
 import psycopg2
 from random import *
+import psycopg2.extras
 categoria=Blueprint('categorias',__name__,url_prefix='/')
 conn=get_Conection()
 
@@ -15,8 +16,10 @@ def categori(id):
     
         cursor.execute('SELECT * FROM users WHERE id_user = %s', [session['id']])
         account = cursor.fetchone()
-        cursor.execute('SELECT id_foto , imagen FROM foto')
+        cursor.execute('SELECT * FROM foto where id_categoria = %s', (id,))
         Fot= cursor.fetchall()
+        cursor.execute('SELECT nombre FROM categoria where id_categoria = %s', (id,))
+        cat= cursor.fetchone()
         
      
 
@@ -24,7 +27,7 @@ def categori(id):
        
         
         
-        return render_template('categoria.html', account =account , Fot = Fot)
+        return render_template('categoria.html', account =account , Fot = Fot, cat = cat)
     
     
 

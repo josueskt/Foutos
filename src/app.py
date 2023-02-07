@@ -135,6 +135,7 @@ def imagen():
         descripcion= request.form['descripcion']
         file = request.files['file']
         id =  session['id']
+        id_categoria = request.form.get('categoriaa')
         if file.filename == '':
             flash('No image selected for uploading')
             
@@ -143,9 +144,9 @@ def imagen():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
            
-            cursor.execute('INSERT INTO foto (titulo, descripcion, imagen, id_user) VALUES (%s,%s,%s,%s)', (titulo,descripcion ,filename , id ))
+            cursor.execute('INSERT INTO foto (titulo, descripcion, imagen, id_user , id_categoria) VALUES (%s,%s,%s,%s,%s)', (titulo,descripcion ,filename , id , id_categoria ))
             conn.commit()
-            print('enviado')
+            print('enviado' , id_categoria)
             return redirect(url_for('Inicio.profile')) 
       
 
