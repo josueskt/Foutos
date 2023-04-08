@@ -1,5 +1,6 @@
 from flask import Blueprint , render_template  , redirect ,url_for , session 
 import psycopg2
+import psycopg2.extras
 from database.db import get_Conection
 conn = get_Conection()
 

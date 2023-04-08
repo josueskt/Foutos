@@ -1,3 +1,32 @@
+.inicio_registro a{
+    
+     text-decoration:  none;
+}
+.inicio_registro >div> a:hover{
+    color: aqua;
+    
+    
+}
+.inicio_registro > div{
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 90px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.inicio_registro .login{
+    
+    text-align: center;
+    
+    background-color: white;;
+}
+.inicio_registro .register{
+    background-color: gray;
+}
 h2{
     border-style: none;
     vertical-align: center;
@@ -52,7 +81,7 @@ button{
     visibility: visible;
     border-radius: 5px ;
     top: 55px;
-    left: 55%;
+    left: 44%;
     color: black;
     background-color: white;
     position: fixed;

@@ -2,6 +2,7 @@ from flask import Blueprint , render_template ,request , redirect , url_for
 from flask import session
 from  database.db import get_Conection
 import psycopg2
+import psycopg2.extras
 mostrar_fotos=Blueprint('mostrar',__name__,url_prefix='/')
 conn=get_Conection()
 @mostrar_fotos.route('/foto/<id>', methods=['GET','POST'] )
@@ -25,7 +26,7 @@ def mostrar(id):
         cursor.execute('SELECT * FROM comentario WHERE id_foto = %s ', (id,))
         comentarios= cursor.fetchall()
         
-        if request.method == 'POST' and comentarios : 
+        if request.method == 'POST'  : 
             comentraio = request.form.get('comentario')
             if comentraio != None or comentraio != '' :
                 cursor.execute("INSERT INTO comentario (texto ,id_user,id_foto) VALUES (%s,%s,%s)", (comentraio,session['id'],id))

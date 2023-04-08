@@ -2,7 +2,7 @@ from flask import Blueprint , render_template  , redirect ,url_for
 from flask import session, flash,request
 from  database.db import get_Conection
 import psycopg2
-
+import psycopg2.extras
 import os
 from werkzeug.utils import secure_filename
 from random import *
@@ -47,7 +47,7 @@ def actualizar_usuario ():
      
      
     
-   # file.save(os.path.join(UPLOAD_FOLDER, filename))
+    
     
     
     
@@ -58,6 +58,7 @@ def actualizar_usuario ():
     return redirect(url_for('Inicio.profile'))
         
  elif file.filename != '':   
+    file.save(os.path.join(UPLOAD_FOLDER, filename))
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     cursor.execute('UPDATE users SET fullname = %s ,imagen = %s,  descripcion = %s where id_user = %s', (fullname,filename,description,session['id']))
     conn.commit()

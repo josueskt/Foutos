@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename ='global.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename ='error.css')}}">
 </head>
 <body>
-    {% extends './menu.html' %}
-    {% block menu_bar  %}
-    
-    {{super()}}
+   
     <div class="error">
         
         <h1>error 404</h1>
@@ -28,6 +26,6 @@
             <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
           </svg>
     </div>
-    {%endblock%}
+   
 </body>
 </html>

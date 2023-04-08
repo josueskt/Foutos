@@ -109,7 +109,7 @@ def logout():
    session.pop('id', None)
    session.pop('username', None)
    # Redirect to login page
-   return redirect(url_for('login'))
+   return redirect(url_for('profile'))
   
 
 
@@ -156,9 +156,11 @@ def imagen():
     return render_template('subir_imagen.html', account =account )
 
 
-
+def no_encontrado(error):
+    return render_template('errore.html'),404
 
 if __name__ == '__main__':
+    app.register_error_handler(404 , no_encontrado)
     app.run(debug = True) 
     
 

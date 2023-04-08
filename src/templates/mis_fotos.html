@@ -9,7 +9,8 @@
 <div class = "container">
 {%for id_foto in foto %}
     <div class="cont_img">
-        <img src="./static/img/todos/{{ id_foto.imagen }}" alt="">
+        <a href="/foto/{{id_foto.id_foto}}"> <img src="./static/img/todos/{{ id_foto.imagen }}" alt="" id="pen"> </a>
+        
     </div>
 
 {% endfor %}   
